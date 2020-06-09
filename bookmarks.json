@@ -1,0 +1,42 @@
+
+{
+    "section" : [
+        {
+            "name" : "Watch",
+            "img":"./assets/home/img/watch.png",
+            "bookmark" : [
+            {"name":"Netflix",
+                "url":"https://netflix.com/",
+                "img":"./assets/home/img/netflix.png"},
+            {"name":"Disney Plus",
+                "url":"",
+                "img":"./assets/home/img/disneyplus.png"},
+            {"name":"Youtube",
+                "url":"",
+                "img":"./assets/home/img/youtube.png"},
+            {"name":"Netflix",
+                "url":"https://netflix.com/",
+                "img":"./assets/home/img/netflix.png"},
+            {"name":"Disney Plus",
+                "url":"",
+                "img":"./assets/home/img/disneyplus.png"},
+            {"name":"Netflix",
+                "url":"https://netflix.com/",
+                "img":"./assets/home/img/netflix.png"},
+            {"name":"Disney Plus",
+                "url":"",
+                "img":"./assets/home/img/disneyplus.png"}
+        ]},
+        {
+            "name" : "Study",
+            "img":"./assets/home/img/study.png",
+            "bookmark" : [
+            {"name":"Uni",
+                "url":"",
+                "img":"./assets/home/img/uni.png"},
+            {"name":"Instagram",
+                "url":"",
+                "img":"./assets/home/img/insta.png"}
+        ]}
+    ]
+}
