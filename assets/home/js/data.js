@@ -14,3 +14,9 @@ $(document).ready(function(){
       $('#bookmarks').html(myresult);
   });
 });
+
+window.addEventListener("keydown", focusOnSearch);
+
+function focusOnSearch(e) {
+	document.getElementById('keywords').focus();
+}

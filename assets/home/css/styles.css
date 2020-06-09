@@ -10,6 +10,40 @@ body {
 	background-color: #313335;
 }
 
+
+input{
+	background-color: transparent;
+	border: 0;
+	border-bottom: 2px solid #9F9F9F;
+	color: transparent;
+	text-shadow: 0 0 0 #9F9F9F;
+	font-size: 40px;
+	text-align: center;
+	font-weight: 700;
+	height: 46px;
+	transition: all 0.4s ease;
+	width: 100%;
+	outline: none;
+
+}
+
+input.hideSearch {
+	border-color: rgba(159, 159, 159, 0.1);
+	opacity: 1;
+	outline: none;
+}
+
+input.showSearch {
+	border-color: rgba(159, 159, 159, 1);
+}
+
+#search {
+	padding-top: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 620px;
+}
+
 ul {
 	list-style-type: none;
 	margin-block-start: 0;
@@ -20,12 +54,16 @@ ul {
 #bookmarks {
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:50px;
+	margin-top:20px;
 	width:640px;
 }
 
 @media (max-width: 700px) {
 	#bookmarks {
+		width: 91.42857143%;
+	}
+
+	#search {
 		width: 91.42857143%;
 	}
 }
@@ -70,10 +108,10 @@ img {
 
 #bookmark-icon img {
 	border-radius: 10px;
-	box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.29);
+	box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 	transition: .3s ease;
 }
 
 #bookmark-icon:hover img {
-	box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.29);
+	box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.6);
 }
