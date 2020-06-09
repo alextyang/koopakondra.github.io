@@ -52,9 +52,7 @@ ul {
 }
 
 #bookmarks {
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:20px;
+	margin: 20px auto 100px auto;
 	width:640px;
 }
 
