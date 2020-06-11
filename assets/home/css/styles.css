@@ -113,3 +113,7 @@ img {
 #bookmark-icon:hover img {
 	box-shadow: 6px 8px 6px rgba(0, 0, 0, 0.6);
 }
+
+.isHidden {
+	display: none !important;
+}
