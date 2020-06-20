@@ -22,7 +22,10 @@
                 "img":"./assets/home/img/googlecalendar.png"},
             {"name":"YNAB",
                 "url":"https://app.youneedabudget.com/641dbbda-be21-4fbd-ad32-aa9d3e51d007/budget",
-                "img":"./assets/home/img/ynab.png"}
+                "img":"./assets/home/img/ynab.png"},
+            {"name":"Alliant",
+                "url":"https://www.alliantcreditunion.com/onlinebanking/dashboard/S40",
+                "img":"./assets/home/img/alliant.png"}
         ]},
         {
             "name" : "Social",
