@@ -71,7 +71,10 @@
                 "img":"./assets/home/img/easybib.png"},
             {"name":"Tandon Books",
                 "url":"https://tandonbooks.org",
-                "img":"./assets/home/img/tandonbooks.png"}
+                "img":"./assets/home/img/tandonbooks.png"},
+            {"name":"Activate Binx Test",
+                "url":"https://app.mybinxhealth.com/login?to=/activate-box",
+                "img":"./assets/home/img/binx.png"}
         ]},
         {
             "name" : "Watch",
@@ -97,6 +100,15 @@
                 "img":"./assets/home/img/xkcd.png"}
         ]},
         {
+            "name" : "Cook",
+            "img":"./assets/home/img/cook.png",
+            "bookmark" : [
+            {"name":"Chez Jorge",
+                "url":"https://chejorge.com/menu/",
+                "img":"./assets/home/img/chezjorge.png"},
+            
+        ]},
+        {
             "name" : "Design",
             "img":"./assets/home/img/design.png",
             "bookmark" : [
@@ -109,6 +121,9 @@
             {"name":"Behance",
                 "url":"https://www.behance.net",
                 "img":"./assets/home/img/behance.png"},
+            {"name":"Google Images",
+                "url":"https://images.google.com/?gws_rd=ssl",
+                "img":"./assets/home/img/image.png"},
             {"name":"Pexels",
                 "url":"https://www.pexels.com/discover/",
                 "img":"./assets/home/img/pexels.png"},
@@ -156,9 +171,6 @@
             {"name":"Github",
                 "url":"https://github.com/koopakondra?tab=repositories",
                 "img":"./assets/home/img/github.png"},
-            {"name":"Sublime Text",
-                "url":"sublime:///",
-                "img":"./assets/home/img/sublime.png"},
             {"name":"Text Mechanic",
                 "url":"https://textmechanic.com",
                 "img":"./assets/home/img/textmechanic.png"},
@@ -194,6 +206,9 @@
             {"name":"Amazon",
                 "url":"https://smile.amazon.com",
                 "img":"./assets/home/img/amazon.png"},
+            {"name":"Goodfair",
+                "url":"https://goodfair.com/collections/frontpage",
+                "img":"./assets/home/img/goodfair.png"},
             {"name":"Forever 21",
                 "url":"https://www.forever21.com/us/shop",
                 "img":"./assets/home/img/forever21.png"},
@@ -206,6 +221,9 @@
             {"name":"hm",
                 "url":"https://www2.hm.com/en_us/index.html",
                 "img":"./assets/home/img/hm.png"},
+            {"name":"wish",
+                "url":"https://wish.com/",
+                "img":"./assets/home/img/wish.png"},
             {"name":"Grubhub",
                 "url":"https://www.grubhub.com/search",
                 "img":"./assets/home/img/grubhub.png"}
