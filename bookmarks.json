@@ -130,7 +130,7 @@
 
         ]},
         {
-            "name" : "Medicine",
+            "name" : "Medical",
             "img":"./assets/home/img/medicine.png",
             "bookmark" : [
             {"name":"Castlight Insurace",
