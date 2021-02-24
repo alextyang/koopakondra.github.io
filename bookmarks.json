@@ -54,12 +54,12 @@
             {"name":"New NYU Classes",
                 "url":"https://newclasses.nyu.edu",
                 "img":"./assets/home/img/nyuclasses.png"},
-                
+
             {"name":"Still and Moving Images SMI Wordpress",
                 "url":"https://wp.nyu.edu/sp21images_01/homework/",
                 "img":"./assets/home/img/wordpress.png"},
             {"name":"Pearson Motion and Sound MS Physics",
-                "url":"https://openvellum.ecollege.com/course.html?courseId=16553716&OpenVellumHMAC=ac627f59fc016404de7d53c0473ace48#10001",
+                "url":"https://portal.mypearson.com/course-home#/tab/active",
                 "img":"./assets/home/img/pearson.png"},
             {"name":"Gradescope Motion and Sound Physics MS Data Structures and Algorithms CS",
                 "url":"https://www.gradescope.com",
@@ -73,8 +73,8 @@
             {"name":"Data Structures and Algorithms CS Piazza",
                 "url":"https://piazza.com/class/kkk0ai3pxvr110#",
                 "img":"./assets/home/img/piazza.png"},
-                
-                
+
+
             {"name":"Quizlet",
                 "url":"https://quizlet.com/latest#",
                 "img":"./assets/home/img/quizlet.png"},
@@ -127,7 +127,31 @@
             {"name":"Chez Jorge",
                 "url":"https://chejorge.com/menu/",
                 "img":"./assets/home/img/chejorge.png"}
-            
+
+        ]},
+        {
+            "name" : "Medicine",
+            "img":"./assets/home/img/medicine.png",
+            "bookmark" : [
+            {"name":"Castlight Insurace",
+                "url":"https://membersecure.anthem.com/member/dashboard",
+                "img":"./assets/home/img/castlight.png"},
+            {"name":"Sutter Health",
+                "url":"https://myhealthonline.sutterhealth.org/mho/Messaging/Review?mailbox=1",
+                "img":"./assets/home/img/sutterhealth.png"},
+            {"name":"Student Health Center SHC NYU",
+                "url":"https://shcportal.nyu.edu/home.aspx",
+                "img":"./assets/home/img/nyu.png"},
+            {"name":"One Medical",
+                "url":"https://app.onemedical.com/",
+                "img":"./assets/home/img/onemedical.png"},
+            {"name":"Anthem Insurance",
+                "url":"https://membersecure.anthem.com/member/dashboard",
+                "img":"./assets/home/img/anthem.png"},
+            {"name":"CVS Caremark Pharmacy",
+                "url":"https://www.caremark.com/wps/myportal/NEWDASHBOARD",
+                "img":"./assets/home/img/cvs.png"},
+
         ]},
         {
             "name" : "Design",
