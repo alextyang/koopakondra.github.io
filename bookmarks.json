@@ -133,9 +133,6 @@
             "name" : "Medical",
             "img":"./assets/home/img/medicine.png",
             "bookmark" : [
-            {"name":"Castlight Insurace",
-                "url":"https://membersecure.anthem.com/member/dashboard",
-                "img":"./assets/home/img/castlight.png"},
             {"name":"Sutter Health",
                 "url":"https://myhealthonline.sutterhealth.org/mho/Messaging/Review?mailbox=1",
                 "img":"./assets/home/img/sutterhealth.png"},
