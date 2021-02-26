@@ -55,7 +55,7 @@
                 "url":"https://newclasses.nyu.edu",
                 "img":"./assets/home/img/nyuclasses.png"},
 
-            {"name":"Still and Moving Images SMI Wordpress",
+            {"name":"Still and Moving Images SMI",
                 "url":"https://wp.nyu.edu/sp21images_01/homework/",
                 "img":"./assets/home/img/wordpress.png"},
             {"name":"Pearson Motion and Sound MS Physics",
@@ -73,6 +73,9 @@
             {"name":"Data Structures and Algorithms CS Piazza",
                 "url":"https://piazza.com/class/kkk0ai3pxvr110#",
                 "img":"./assets/home/img/piazza.png"},
+            {"name":"Digital Sketchbook Wordpress",
+                "url":"https://wp.nyu.edu/tandonschoolofengineering-alexyangphoto/wp-admin/",
+                "img":"./assets/home/img/wordpress.png"},
 
 
             {"name":"Quizlet",
@@ -113,9 +116,6 @@
             {"name":"Twitch",
                 "url":"https://www.twitch.tv",
                 "img":"./assets/home/img/twitch.png"},
-            {"name":"Prime Video",
-                "url":"https://www.amazon.com/Amazon-Video/b/?&node=2858778011&ref=dvm_MLP_ROWNA_US_1",
-                "img":"./assets/home/img/primevideo.png"},
             {"name":"xkcd",
                 "url":"https://xkcd.com",
                 "img":"./assets/home/img/xkcd.png"}
