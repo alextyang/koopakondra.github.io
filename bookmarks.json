@@ -36,7 +36,11 @@
                 "img":"./assets/home/img/reddit.png"},
             {"name":"Groupme",
                 "url":"https://web.groupme.com/chats",
-                "img":"./assets/home/img/groupme.png"}
+                "img":"./assets/home/img/groupme.png"},
+            {"name":"Daily Screener",
+                "url":"https://www.nyu.edu/nyureturns/dailyscreener",
+                "img":"./assets/home/img/screener.png"}
+
         ]},
         {
             "name" : "Study",
