@@ -237,7 +237,13 @@
                 "img":"./assets/home/img/awesomelists.png"},
             {"name":"Educative",
                 "url":"https://www.educative.io",
-                "img":"./assets/home/img/educative.png"}
+                "img":"./assets/home/img/educative.png"},
+            {"name":"CSS Flexbox Guide",
+                "url":"https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+                "img":"./assets/home/img/css.png"},
+            {"name":"CSS Grid Guide",
+                "url":"https://css-tricks.com/snippets/css/complete-guide-grid/",
+                "img":"./assets/home/img/css.png"}
         ]},
         {
             "name" : "Shop",
