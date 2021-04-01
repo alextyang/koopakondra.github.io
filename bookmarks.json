@@ -54,13 +54,13 @@
                 "img":"./assets/home/img/sling.png"},
             {"name":"myTime Payroll Timesheet",
                 "url":"",
-                "img":"./assets/home/img/myTime.png"},
+                "img":"./assets/home/img/mytime.png"},
             {"name":"Payroll Calendar",
                 "url":"https://docs.google.com/spreadsheets/d/1Ut9_oYFsE5icm1sSDzdvJoYhaBFK9t3qEoF8SSy5FVc/edit#gid=22329940",
-                "img":"./assets/home/img/.png"},
+                "img":"./assets/home/img/sheet.png"},
             {"name":"End of Shift Form",
                 "url":"https://docs.google.com/forms/d/e/1FAIpQLSdd_heoQkHvRkYopZYJQluYsAqeY2eHwO1yUnE1y7M9uwLYUw/viewform",
-                "img":"./assets/home/img/.png"}
+                "img":"./assets/home/img/form.png"}
         ]},
         {
             "name" : "Study",
@@ -232,7 +232,7 @@
             "img":"./assets/home/img/code.png",
             "bookmark" : [
             {"name":"Github",
-                "url":"https://github.com/koopakondra?tab=repositories",
+                "url":"https://github.com/alextyang?tab=repositories",
                 "img":"./assets/home/img/github.png"},
             {"name":"Text Mechanic",
                 "url":"https://textmechanic.com",
