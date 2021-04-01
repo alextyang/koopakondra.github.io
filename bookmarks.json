@@ -53,7 +53,7 @@
                 "url":"https://app.getsling.com",
                 "img":"./assets/home/img/sling.png"},
             {"name":"myTime Payroll Timesheet",
-                "url":"",
+                "url":"https://shibboleth.nyu.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=https://nyumytime.wfsaas.com",
                 "img":"./assets/home/img/mytime.png"},
             {"name":"Payroll Calendar",
                 "url":"https://docs.google.com/spreadsheets/d/1Ut9_oYFsE5icm1sSDzdvJoYhaBFK9t3qEoF8SSy5FVc/edit#gid=22329940",
