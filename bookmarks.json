@@ -43,6 +43,26 @@
 
         ]},
         {
+            "name" : "Work",
+            "img":"./assets/home/img/work.png",
+            "bookmark" : [
+            {"name":"Peoplesync",
+                "url":"https://wd5.myworkday.com/nyu/d/home.htmld",
+                "img":"./assets/home/img/peoplesync.png"},
+            {"name":"Sling Scheduling",
+                "url":"https://app.getsling.com",
+                "img":"./assets/home/img/sling.png"},
+            {"name":"myTime Payroll Timesheet",
+                "url":"",
+                "img":"./assets/home/img/myTime.png"},
+            {"name":"Payroll Calendar",
+                "url":"https://docs.google.com/spreadsheets/d/1Ut9_oYFsE5icm1sSDzdvJoYhaBFK9t3qEoF8SSy5FVc/edit#gid=22329940",
+                "img":"./assets/home/img/.png"},
+            {"name":"End of Shift Form",
+                "url":"https://docs.google.com/forms/d/e/1FAIpQLSdd_heoQkHvRkYopZYJQluYsAqeY2eHwO1yUnE1y7M9uwLYUw/viewform",
+                "img":"./assets/home/img/.png"}
+        ]},
+        {
             "name" : "Study",
             "img":"./assets/home/img/study.png",
             "bookmark" : [
@@ -139,7 +159,7 @@
                 "img":"./assets/home/img/sutterhealth.png"},
             {"name":"Student Health Center SHC NYU",
                 "url":"https://shcportal.nyu.edu/home.aspx",
-                "img":"./assets/home/img/nyu.png"},
+                "img":"./assets/home/img/shc.png"},
             {"name":"One Medical",
                 "url":"https://app.onemedical.com/",
                 "img":"./assets/home/img/onemedical.png"},
