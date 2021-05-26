@@ -45,7 +45,7 @@
                 "img":"./assets/home/img/artnet.png"},
             {"name":"Times timeout",
                 "url":"https://www.timeout.com/newyork",
-                "img":"./assets/home/img/timeout.png"},
+                "img":"./assets/home/img/timeout.png"}
         ]},
         {
             "name" : "Work",
