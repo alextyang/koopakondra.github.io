@@ -53,7 +53,7 @@
                 "img":"./assets/home/img/sling.png"},
             {"name":"Handshake",
                 "url":"https://nyu.joinhandshake.com",
-                "img":"./assets/home/img/peoplesync.png"}
+                "img":"./assets/home/img/handshake.png"}
         ]},
         {
             "name" : "Study",
@@ -88,10 +88,7 @@
                 "img":"./assets/home/img/easybib.png"},
             {"name":"Tandon Books",
                 "url":"https://tandonbooks.org",
-                "img":"./assets/home/img/tandonbooks.png"},
-            {"name":"Activate Binx Test",
-                "url":"https://app.mybinxhealth.com/login?to=/activate-box",
-                "img":"./assets/home/img/binx.png"}
+                "img":"./assets/home/img/tandonbooks.png"}
         ]},
         {
             "name" : "Watch",
@@ -117,10 +114,12 @@
             "name" : "Cook",
             "img":"./assets/home/img/cook.png",
             "bookmark" : [
+            {"name":"precycle groceries",
+                "url":"https://www.precyclenyc.com",
+                "img":"./assets/home/img/precycle.png"},
             {"name":"Chez Jorge",
                 "url":"https://chejorge.com/menu/",
                 "img":"./assets/home/img/chejorge.png"}
-
         ]},
         {
             "name" : "Medical",
@@ -267,10 +266,7 @@
                 "img":"./assets/home/img/wish.png"},
             {"name":"Grubhub",
                 "url":"https://www.grubhub.com/search",
-                "img":"./assets/home/img/grubhub.png"},
-            {"name":"precycle groceries",
-                "url":"https://www.precyclenyc.com",
-                "img":"./assets/home/img/precycle.png"}
+                "img":"./assets/home/img/grubhub.png"}
         ]},
         {
             "name" : "Utilities",
