@@ -149,6 +149,8 @@ function setCSSGradientByIndex(nInx)
   console.log(d.format('[Just Good Design:\n]MMMM Do YYYY [\n]h:mm:ss a'));
 }
 
+
+
 function getLocation()
 {
   if (navigator.geolocation)
@@ -172,6 +174,49 @@ function showLocation(position)
   console.log(position);
   getSunInfo(position.coords.latitude,position.coords.longitude);
   getWeather(position.coords.latitude,position.coords.longitude,showWeather);
+}
+
+function kelvinToFDegrees(kelvin)
+{
+   return Math.round((1.8 * (kelvin - 273 ) + 32));
+}
+
+function showWeather(response)
+{
+  var newline = '<br>&nbsp&nbsp';
+  var icon = response["weather"][0]["icon"];
+  var iconImg = '<img align="middle" width="50" height="50"  src="http://openweathermap.org/img/w/' + icon + '" >';
+  var locationName = response.name;
+  var lat = response.coord.lat;
+  var lon = response.coord.lon;
+  var weatherDesc = response.weather[0].description;
+  var fDegrees = kelvinToFDegrees(response.main.temp)+
+"&#186;";
+
+  var result = iconImg
+  + "  " + weatherDesc + newline
+  + locationName + ": " +
+  + lat + ', ' + lon + newline;
+
+  $("#temp").html(fDegrees);
+  $("#weather").html(result);
+
+  console.log(response);
+  console.log(result);
+}
+
+function getWeather(lat,lon,callback)
+{
+  var api = "http://api.openweathermap.org/data/2.5/weather";
+  api += "?lat=" + lat;
+  api += "&lon=" + lon;
+
+  $("#weatherId").html("Loading Weather Info...");
+  $.ajax({
+    url: api,
+    dataType: 'jsonp',
+    success:callback
+    });
 }
 
 function getSunInfo(lat,lng)
