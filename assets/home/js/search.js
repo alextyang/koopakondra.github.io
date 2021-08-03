@@ -103,6 +103,7 @@ function toCSSGradient(data)
      css+= " #" + item.color + " " + item.position + "%";
      if ( i<len-1 ) css += ",";
   }
+  console.log(css + ")");
   return css + ")";
 }
 
