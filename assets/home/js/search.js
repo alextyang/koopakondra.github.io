@@ -131,7 +131,8 @@ function setCSSGradientByIndex(nInx)
     var css = toCSSGradient(data);
 
     // update the background
-    $("#grad").css("background", css);
+    elem = document.getElementById("#grad");
+    elem.style.background = css;
 
 
     // possible to change the foreground color on background change
@@ -140,11 +141,6 @@ function setCSSGradientByIndex(nInx)
 
   // always set time
   d.hours(inx);
-
-  // update visible
-  $("#time").html(d.format('h:mm'));
-  //$("#time").html(d.format('h:mm[<span id="timeOfDay">]a[</span>]'));
-  $("#date").html(d.format('MMMM Do YYYY'));
 
   // update in console
   console.log(d.format('[Just Good Design:\n]MMMM Do YYYY [\n]h:mm:ss a'));
@@ -201,7 +197,3 @@ getLocation();
 // update every minute
 var interval = setInterval(function(){updateBasedOnNow();},60 * 1000);
 var interval2 = setInterval(function(){getLocation();},60 * 60 * 1000);
-// update onClick
-$("#gradInfo").click(function() {
-  updateBasedOnNow();
-});
