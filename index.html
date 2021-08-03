@@ -18,23 +18,26 @@
 	<body>
 
 		<div id="grad">
+
+			<script type="text/javascript" src="./assets/home/js/suncalc.js"></script>
+
+			<section id="search">
+		        <input name="keywords" type="text" id="keywords" size="50" spellcheck="false" autocomplete="false" onkeydown="handleKeyPress(event)">
+			</section>
+
+			<section id="bookmarks">
+			</section>
+
+
+			<section id="templates">
+				<script type="text/handlebars-template" id="section-template">{{#section}}<ul id="bookmark-list" class="bookmark-list"><li id="section-icon"><img src="{{img}}" alt="{{name}}" name=""></img></li>{{#each bookmark}}<li id="bookmark-icon-item">{{> bookmarkTemplate}}</li>{{/each}}</ul>{{/section}}</script>
+
+				<script type="text/handlebars-template" id="bookmark-template"><a href="{{url}}" id="bookmark-icon" class="bookmark-icon" name="{{name}}"><img src="{{img}}" alt="{{name}}"></img></a></script>
+			</section>
+
 		</div>
 
-		<script type="text/javascript" src="./assets/home/js/suncalc.js"></script>
 
-		<section id="search">
-	        <input name="keywords" type="text" id="keywords" size="50" spellcheck="false" autocomplete="false" onkeydown="handleKeyPress(event)">
-		</section>
-
-		<section id="bookmarks">
-		</section>
-
-
-		<section id="templates">
-			<script type="text/handlebars-template" id="section-template">{{#section}}<ul id="bookmark-list" class="bookmark-list"><li id="section-icon"><img src="{{img}}" alt="{{name}}" name=""></img></li>{{#each bookmark}}<li id="bookmark-icon-item">{{> bookmarkTemplate}}</li>{{/each}}</ul>{{/section}}</script>
-
-			<script type="text/handlebars-template" id="bookmark-template"><a href="{{url}}" id="bookmark-icon" class="bookmark-icon" name="{{name}}"><img src="{{img}}" alt="{{name}}"></img></a></script>
-		</section>
 
 		<script src="./assets/home/js/data.js" type="text/javascript"></script>
 
