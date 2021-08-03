@@ -131,9 +131,7 @@ function setCSSGradientByIndex(nInx)
     var css = toCSSGradient(data);
 
     // update the background
-    elem = document.getElementById("#grad");
-    elem.style.background = css;
-
+    document.body.style.backgroundImage = css;
 
     // possible to change the foreground color on background change
     //$("#gradInfo").css("color", "#fff");
