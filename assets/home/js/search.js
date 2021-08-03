@@ -132,8 +132,6 @@ function setCSSGradientByIndex(nInx)
     // update the background
     $("#grad").css("background", css);
 
-    // reset the slider
-    $( "#slider" ).slider( "option", "value", (inx/24)*100 );
 
     // possible to change the foreground color on background change
     //$("#gradInfo").css("color", "#fff");
@@ -150,19 +148,6 @@ function setCSSGradientByIndex(nInx)
   // update in console
   console.log(d.format('[Just Good Design:\n]MMMM Do YYYY [\n]h:mm:ss a'));
 }
-
-// generate the slider
-$( "#slider" ).slider({
-  slide: function( event, ui )
-  {
-    var per = ui.value == 0 ? 0 : ui.value/100;
-    var nInx = Math.round((grads.length-1) * per);
-    if ( nInx != inx )
-    {
-      setCSSGradientByIndex(nInx);
-    }
-  }
-});
 
 function getLocation()
 {
