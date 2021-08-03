@@ -12,6 +12,8 @@ body {
 	min-height: 100vh;
 	height: 2100px;
 	width: 100%;
+	padding: 10px;
+	margin: -10px;
 	overflow-x: hidden;
 }
 
