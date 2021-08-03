@@ -10,6 +10,7 @@ body {
 	background-color: #313335;
 	-webkit-backdrop-filter: blur(10px);
 	min-height: 100vh;
+	height: 100%;
 	width: 100vw;
 }
 
@@ -118,25 +119,17 @@ img {
 	border-radius: 10px;
 	transition: .3s ease;
 	box-shadow:
-	  0 0.9px 2.1px rgba(0, 0, 0, 0.018),
-	  0 1.8px 5.5px rgba(0, 0, 0, 0.026),
-	  0 2.8px 10.4px rgba(0, 0, 0, 0.032),
-	  0 3.9px 17.4px rgba(0, 0, 0, 0.038),
-	  0 5.2px 27.7px rgba(0, 0, 0, 0.044),
-	  0 7px 43.9px rgba(0, 0, 0, 0.052),
-	  0 11px 80px rgba(0, 0, 0, 0.07)
-	;
+  0 3.8px 13.6px rgba(0, 0, 0, 0.054),
+  0 8.6px 32.9px rgba(0, 0, 0, 0.085),
+  0 20px 80px rgba(0, 0, 0, 0.24)
+;
 }
 
 #bookmark-icon:hover img {
 	box-shadow:
-  0 3px 2.1px rgba(0, 0, 0, 0.018),
-  0 6.2px 5.5px rgba(0, 0, 0, 0.026),
-  0 9.5px 10.4px rgba(0, 0, 0, 0.032),
-  0 13.3px 17.4px rgba(0, 0, 0, 0.038),
-  0 17.9px 27.7px rgba(0, 0, 0, 0.044),
-  0 24px 43.9px rgba(0, 0, 0, 0.052),
-  0 38px 80px rgba(0, 0, 0, 0.07)
+  0 3.8px 13.6px rgba(0, 0, 0, 0.087),
+  0 8.6px 32.9px rgba(0, 0, 0, 0.139),
+  0 20px 80px rgba(0, 0, 0, 0.39)
 ;
 }
 
