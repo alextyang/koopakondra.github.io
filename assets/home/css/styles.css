@@ -11,7 +11,11 @@ body {
 	-webkit-backdrop-filter: blur(10px);
 	min-height: 100vh;
 	height: 100%;
-	width: 100%;
+	overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 #grad {
