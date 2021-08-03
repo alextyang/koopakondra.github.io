@@ -6004,5 +6004,3 @@ getLocation();
 // update every minute
 var interval = setInterval(function(){updateBasedOnNow();},60 * 1000);
 var interval2 = setInterval(function(){getLocation();},60 * 60 * 1000);
-
-window.resizeTo();
