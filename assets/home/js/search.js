@@ -185,7 +185,7 @@ function showWeather(response)
 {
   var newline = '<br>&nbsp&nbsp';
   var icon = response["weather"][0]["icon"];
-  var iconImg = '<img align="middle" width="50" height="50"  src="http://openweathermap.org/img/w/' + icon + '" >';
+  var iconImg = '<img align="middle" width="50" height="50"  src="https://openweathermap.org/img/w/' + icon + '" >';
   var locationName = response.name;
   var lat = response.coord.lat;
   var lon = response.coord.lon;
