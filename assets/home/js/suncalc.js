@@ -5902,7 +5902,7 @@ var grads = [
 // {color:"20202c",position:0},{color:"515175",position:100}
 function toCSSGradient(data)
 {
-  var css = "linear-gradient(45deg, ";
+  var css = "linear-gradient(65deg, ";
   var len = data.length;
 
   for (var i=0;i<len;i++)
