@@ -11,7 +11,7 @@ body {
 	-webkit-backdrop-filter: blur(10px);
 	min-height: 100vh;
 	height: 100%;
-	width: 100vw;
+	width: 100%;
 }
 
 #grad {
@@ -39,13 +39,13 @@ input{
 }
 
 input.hideSearch {
-	border-color: rgba(159, 159, 159, 0.1);
+	border-color: rgba(159, 159, 159, 0);
 	opacity: 1;
 	outline: none;
 }
 
 input.showSearch {
-	border-color: rgba(159, 159, 159, 1);
+	border-color: #D0DAF3;
 }
 
 #search {
@@ -127,9 +127,9 @@ img {
 
 #bookmark-icon:hover img {
 	box-shadow:
-  0 3.8px 13.6px rgba(0, 0, 0, 0.087),
-  0 8.6px 32.9px rgba(0, 0, 0, 0.139),
-  0 20px 80px rgba(0, 0, 0, 0.39)
+  0 13.4px 13.6px rgba(0, 0, 0, 0.029),
+  0 30px 32.9px rgba(0, 0, 0, 0.046),
+  0 70px 80px rgba(0, 0, 0, 0.13)
 ;
 }
 
