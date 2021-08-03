@@ -207,7 +207,7 @@ function showWeather(response)
 
 function getWeather(lat,lon,callback)
 {
-  var api = "http://api.openweathermap.org/data/2.5/weather";
+  var api = "https://api.openweathermap.org/data/2.5/weather";
   api += "?lat=" + lat;
   api += "&lon=" + lon;
 
