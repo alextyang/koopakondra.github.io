@@ -25,12 +25,9 @@
             "name" : "Social",
             "img":"./assets/home/img/social.png",
             "bookmark" : [
-            {"name":"Instagram",
-                "url":"https://www.instagram.com",
-                "img":"./assets/home/img/instagram.png"},
-            {"name":"Facebook",
-                "url":"https://www.facebook.com",
-                "img":"./assets/home/img/fb.png"},
+            {"name":"NYT New York Times News",
+                  "url":"https://www.nytimes.com",
+                  "img":"./assets/home/img/nyt.png"},
             {"name":"Eventbrite",
                 "url":"https://www.eventbrite.com",
                 "img":"./assets/home/img/eventbrite.png"},
@@ -45,12 +42,6 @@
             "name" : "Work",
             "img":"./assets/home/img/work.png",
             "bookmark" : [
-            {"name":"Peoplesync",
-                "url":"https://wd5.myworkday.com/nyu/d/home.htmld",
-                "img":"./assets/home/img/peoplesync.png"},
-            {"name":"Sling Scheduling",
-                "url":"https://app.getsling.com",
-                "img":"./assets/home/img/sling.png"},
             {"name":"Handshake",
                 "url":"https://nyu.joinhandshake.com",
                 "img":"./assets/home/img/handshake.png"}
@@ -73,7 +64,9 @@
                 "img":"./assets/home/img/nyulms.png"},
 
 
-
+            {"name":"Pearson Physics",
+                "url":"https://portal.mypearson.com/course-home#/tab/active",
+                "img":"./assets/home/img/pearson.png"},
             {"name":"Quizlet",
                 "url":"https://quizlet.com/latest#",
                 "img":"./assets/home/img/quizlet.png"},
@@ -81,7 +74,7 @@
                 "url":"https://brilliant.org/courses/",
                 "img":"./assets/home/img/brilliant.png"},
             {"name":"Desmos",
-                "url":"https://www.desmos.com/calculator",
+                "url":"https://www.desmos.com/scientific",
                 "img":"./assets/home/img/desmos.png"},
             {"name":"EasyBib",
                 "url":"https://www.easybib.com",
