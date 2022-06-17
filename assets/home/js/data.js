@@ -1,19 +1,19 @@
 
 var data_providers = "bookmarks.json";
 var selectedLink = null;
-  
+
 $(document).ready(function(){
 
   var text = document.getElementById("keywords");
 
-  text.addEventListener('input', (event) => {    
+  text.addEventListener('input', (event) => {
 
     var bookmarkLists = document.getElementsByClassName("bookmark-list");
     var value = text.value.trim().toLowerCase();
     var isFirst = true;
 
     [].forEach.call(bookmarkLists, function(bookmarkList){
-      
+
       var iconWrappers = bookmarkList.childNodes;
       var shownCount = -1;
 
@@ -62,6 +62,7 @@ $(document).ready(function(){
 
   $.getJSON(data_providers,
     function (data) {
+      console.log(data);
       var partsource = $('#bookmark-template').html();
       var parttemplate = Handlebars.compile(partsource);
       Handlebars.registerPartial('bookmarkTemplate', parttemplate);
