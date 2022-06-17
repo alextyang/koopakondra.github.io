@@ -91,26 +91,7 @@
                 "url":"https://images.google.com/?gws_rd=ssl",
                 "img":"./assets/home/img/googleimages.png"}
         ]},
-        {
-            "name" : "Sound",
-            "img":"./assets/home/img/sound.png",
-            "bookmark" : [
-            {"name":"Genius",
-                "url":"https://genius.com",
-                "img":"./assets/home/img/genius.png"},
-            {"name":"freesound",
-                "url":"https://freesound.org",
-                "img":"./assets/home/img/freesound.png"},
-            {"name":"midi basic pitch",
-                "url":"https://basicpitch.spotify.com",
-                "img":"./assets/home/img/basicpitch.png"},
-            {"name":"hook theory tab database",
-                "url":"https://www.hooktheory.com/theorytab",
-                "img":"./assets/home/img/hooktheory.png"},
-            {"name":"stem splitter",
-                "url":"https://www.lalal.ai",
-                "img":"./assets/home/img/lalal.png"}
-        ]},
+
         {
             "name" : "Cook",
             "img":"./assets/home/img/cook.png",
