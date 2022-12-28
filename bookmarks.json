@@ -49,7 +49,7 @@
                   "url":"https://www.nytimes.com",
                   "img":"./assets/home/img/nyt.png"},
             {"name":"Artcards exhibitions",
-                "url":"https://artcards.cc",
+                "url":"http://artcards.cc",
                 "img":"./assets/home/img/artcards.png"},
             {"name":"Timesout timeout",
                 "url":"https://www.timeout.com/newyork",
@@ -68,11 +68,6 @@
             {"name":"LMS Brightspace NYU Classes",
                 "url":"https://brightspace.nyu.edu/d2l/home",
                 "img":"./assets/home/img/nyulms.png"},
-
-
-            {"name":"Desmos",
-                "url":"https://www.desmos.com/scientific",
-                "img":"./assets/home/img/desmos.png"},
             {"name":"EasyBib",
                 "url":"https://www.easybib.com",
                 "img":"./assets/home/img/easybib.png"}
@@ -81,6 +76,9 @@
             "name" : "Design",
             "img":"./assets/home/img/design.png",
             "bookmark" : [
+            {"name":"cargo website alextyang",
+                "url":"https://alextyang.cargo.site/admin",
+                "img":"./assets/home/img/cargo.png"},
             {"name":"Adobe Fonts",
                 "url":"https://fonts.adobe.com/fonts",
                 "img":"./assets/home/img/adobefonts.png"},
