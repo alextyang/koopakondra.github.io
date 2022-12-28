@@ -47,7 +47,7 @@
             "bookmark" : [
             {"name":"buildinglink bulletin",
                 "url":"https://buildinglink.com/v2/tenant/postings/postingareas.aspx?typeid=2",
-                "img":"./assets/home/img/john.png"},
+                "img":"./assets/home/img/bldg.png"},
             {"name":"channel yt",
                 "url":"https://studio.youtube.com/channel/UCaxeeYHYr961k3nVwutOr_g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D",
                 "img":"./assets/home/img/youtubechannel.png"},
