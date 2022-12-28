@@ -45,6 +45,12 @@
             "name" : "Social",
             "img":"./assets/home/img/social.png",
             "bookmark" : [
+            {"name":"buildinglink bulletin",
+                "url":"https://buildinglink.com/v2/tenant/postings/postingareas.aspx?typeid=2",
+                "img":"./assets/home/img/bldg.png"},
+            {"name":"channel yt",
+                "url":"https://studio.youtube.com/channel/UCaxeeYHYr961k3nVwutOr_g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D",
+                "img":"./assets/home/img/youtubechannel.png"},
             {"name":"NYT New York Times News",
                   "url":"https://www.nytimes.com",
                   "img":"./assets/home/img/nyt.png"},
@@ -82,11 +88,14 @@
             {"name":"Adobe Fonts",
                 "url":"https://fonts.adobe.com/fonts",
                 "img":"./assets/home/img/adobefonts.png"},
+            {"name":"fontbrief fontsearch",
+                "url":"https://www.fontbrief.com/fontbrief",
+                "img":"./assets/home/img/fontbrief.png"},
             {"name":"Coolors Color Palette",
                 "url":"https://coolors.co/generate",
                 "img":"./assets/home/img/coolors.png"},
-            {"name":"Google Images",
-                "url":"https://images.google.com/?gws_rd=ssl",
+            {"name":"Google arts and culture",
+                "url":"https://artsandculture.google.com/explore",
                 "img":"./assets/home/img/googleimages.png"}
         ]},
         {
@@ -96,18 +105,12 @@
             {"name":"Genius",
                 "url":"https://genius.com",
                 "img":"./assets/home/img/genius.png"},
+            {"name":"ratemymusic rateyourmusic",
+                "url":"https://rateyourmusic.com/new-music/",
+                "img":"./assets/home/img/rateyourmusic.png"},
             {"name":"freesound",
                 "url":"https://freesound.org",
-                "img":"./assets/home/img/freesound.png"},
-            {"name":"midi basic pitch",
-                "url":"https://basicpitch.spotify.com",
-                "img":"./assets/home/img/basicpitch.png"},
-            {"name":"hook theory tab database",
-                "url":"https://www.hooktheory.com/theorytab",
-                "img":"./assets/home/img/hooktheory.png"},
-            {"name":"stem splitter",
-                "url":"https://www.lalal.ai",
-                "img":"./assets/home/img/lalal.png"}
+                "img":"./assets/home/img/freesound.png"}
         ]},
         {
             "name" : "Code",
@@ -138,7 +141,10 @@
                 "img":"./assets/home/img/precycle.png"},
             {"name":"Happy Cow vegan reviews",
                 "url":"https://www.happycow.net",
-                "img":"./assets/home/img/happycow.png"}
+                "img":"./assets/home/img/happycow.png"},
+            {"name":"yelp",
+                "url":"https://www.yelp.com",
+                "img":"./assets/home/img/yelp.png"}
         ]},
         {
             "name" : "Medical",
@@ -147,9 +153,6 @@
             {"name":"Humantold therapy meet",
                 "url":"https://meet.humantold.com",
                 "img":"./assets/home/img/humantold.png"},
-            {"name":"Peak ket therapy",
-                "url":"https://app.withpeak.com/dashboard",
-                "img":"./assets/home/img/peak.png"},
             {"name":"One Medical",
                 "url":"https://app.onemedical.com/",
                 "img":"./assets/home/img/onemedical.png"},
@@ -207,22 +210,19 @@
                 "img":"./assets/home/img/target.png"},
             {"name":"grove",
                 "url":"https://www.grove.co",
-                "img":"./assets/home/img/grove.png"},
-            {"name":"the ordinary skincare",
-                "url":"https://theordinary.com/en-us",
-                "img":"./assets/home/img/ordinary.png"}
+                "img":"./assets/home/img/grove.png"}
         ]},
         {
             "name" : "Utilities",
             "img":"./assets/home/img/utilities.png",
             "bookmark" : [
-            {"name":"Anon Temp Emails",
+            {"name":"Anon Temp mail email",
                 "url":"https://app.anonaddy.com",
                 "img":"./assets/home/img/anonaddy.png"},
-            {"name":"Cloud Convert",
+            {"name":"Cloud Convert file",
                 "url":"https://cloudconvert.com",
                 "img":"./assets/home/img/cloudconvert.png"},
-            {"name":"Google Translate",
+            {"name":"Translate",
                 "url":"https://translate.google.com",
                 "img":"./assets/home/img/googletranslate.png"}
         ]}
