@@ -42,7 +42,7 @@ input{
 	transition: all 0.4s ease;
 	width: 100%;
 	outline: none;
-	opacity: 0.5;
+	opacity: 0.7;
 	mix-blend-mode: screen;
 }
 
@@ -112,7 +112,7 @@ img {
 #section-icon img {
 	width:50px;
 	height:50px;
-	opacity: 0.5;
+	opacity: 0.8;
 	mix-blend-mode: screen;
 }
 
@@ -128,7 +128,7 @@ img {
 #bookmark-icon img {
 	border-radius: 10px;
 	transition: .3s ease;
-	opacity:0.8;
+	opacity:0.7;
 	box-shadow:
   0 3.8px 13.6px rgba(0, 0, 0, 0.054),
   0 8.6px 32.9px rgba(0, 0, 0, 0.085),
