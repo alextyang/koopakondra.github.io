@@ -43,6 +43,7 @@ input{
 	width: 100%;
 	outline: none;
 	opacity: 0.5;
+	mix-blend-mode: screen;
 }
 
 input.hideSearch {
@@ -112,6 +113,7 @@ img {
 	width:50px;
 	height:50px;
 	opacity: 0.5;
+	mix-blend-mode: screen;
 }
 
 
@@ -138,8 +140,7 @@ img {
 	box-shadow:
   0 5px 13.6px rgba(0, 0, 0, 0.054),
   0 11.1px 32.9px rgba(0, 0, 0, 0.085),
-  0 26px 80px rgba(0, 0, 0, 0.24)
-;
+  0 26px 80px rgba(0, 0, 0, 0.24);
 }
 
 .isHidden {
