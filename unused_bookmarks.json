@@ -1,0 +1,73 @@
+[
+    {
+        "name": "Violet Network",
+        "url": "https://violetnetwork.nyu.edu/hub/nyuwide/home-v3",
+        "img": "./assets/home/img/nyuvn.png"
+    },
+    {
+        "name": "Wasserman center career",
+        "url": "https://www.nyu.edu/students/student-information-and-resources/career-development-and-jobs.html",
+        "img": "./assets/home/img/nyuwc.png"
+    },
+    {
+        "name": "channel yt",
+        "url": "https://studio.youtube.com/channel/UCaxeeYHYr961k3nVwutOr_g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D",
+        "img": "./assets/home/img/youtubechannel.png"
+    },
+    {
+        "name": "Study",
+        "img": "./assets/home/img/study.png",
+        "bookmark": [
+            {
+                "name": "NYU Home",
+                "url": "https://globalhome.nyu.edu/services/favorites",
+                "img": "./assets/home/img/nyu.png"
+            },
+            {
+                "name": "Albert",
+                "url": "http://albert.nyu.edu/albert_index.html",
+                "img": "./assets/home/img/albert.png"
+            },
+            {
+                "name": "LMS Brightspace NYU Classes",
+                "url": "https://brightspace.nyu.edu/d2l/home",
+                "img": "./assets/home/img/nyulms.png"
+            },
+            {
+                "name": "EasyBib",
+                "url": "https://www.easybib.com",
+                "img": "./assets/home/img/easybib.png"
+            },
+            {
+                "name": "senior project google space gmail",
+                "url": "https://mail.google.com/mail/u/1/#chat/space/AAAAx7uLh_s",
+                "img": "./assets/home/img/gspaces.png"
+            },
+            {
+                "name": "UX design slack",
+                "url": "https://ux-design-nyu-ss23.slack.com/archives/C04L2N2FNPP",
+                "img": "./assets/home/img/slack.png"
+            },
+            {
+                "name": "UX design notion",
+                "url": "https://nyu-ux-ss23.notion.site/nyu-ux-ss23/UX-Design-NYU-SS23-952d9ed2899740e4b341647681e8cf01",
+                "img": "./assets/home/img/notion.png"
+            },
+            {
+                "name": "cargo site portfolio edit",
+                "url": "https://alextyang.cargo.site/admin",
+                "img": "./assets/home/img/cargosite.png"
+            },
+            {
+                "name": "senior project gitbook notebook",
+                "url": "https://carla-gannis.gitbook.io/idm-senior-project-spring-2023-gannis/",
+                "img": "./assets/home/img/gitbook.png"
+            }
+        ]
+    },
+    {
+        "name": "showtime",
+        "url": "https://www.showtime.com/home",
+        "img": "./assets/home/img/showtime.png"
+    }
+]

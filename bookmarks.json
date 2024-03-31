@@ -1,245 +1,255 @@
-
 {
-    "section" : [
+    "section": [
         {
-            "name" : "Manage",
-            "img":"./assets/home/img/manage.png",
-            "bookmark" : [
-            {"name":"Google Drive",
-                "url":"https://drive.google.com/drive/u/1/my-drive",
-                "img":"./assets/home/img/drive.png"},
-            {"name":"iCloud",
-                "url":"https://www.icloud.com",
-                "img":"./assets/home/img/icloud.png"},
-            {"name":"Google Calendar",
-                "url":"https://google.com/calendar",
-                "img":"./assets/home/img/googlecalendar.png"},
-            {"name":"YNAB",
-                "url":"https://app.youneedabudget.com/641dbbda-be21-4fbd-ad32-aa9d3e51d007/budget",
-                "img":"./assets/home/img/ynab.png"},
-            {"name":"Alliant",
-                "url":"https://www.alliantcreditunion.com/onlinebanking/dashboard/S40",
-                "img":"./assets/home/img/alliant.png"}
-        ]},
+            "name": "Manage",
+            "img": "./assets/home/img/manage.png",
+            "bookmark": [
+                {
+                    "name": "Google Drive",
+                    "url": "https://drive.google.com/drive/u/1/my-drive",
+                    "img": "./assets/home/img/drive.png"
+                },
+                {
+                    "name": "iCloud",
+                    "url": "https://www.icloud.com",
+                    "img": "./assets/home/img/icloud.png"
+                },
+                {
+                    "name": "Alliant",
+                    "url": "https://www.alliantcreditunion.com/onlinebanking/dashboard/S40",
+                    "img": "./assets/home/img/alliant.png"
+                }
+            ]
+        },
         {
-            "name" : "Work",
-            "img":"./assets/home/img/work.png",
-            "bookmark" : [
-            {"name":"Handshake",
-                "url":"https://nyu.joinhandshake.com",
-                "img":"./assets/home/img/handshake.png"},
-            {"name":"LinkedIn",
-                "url":"https://www.linkedin.com/feed/",
-                "img":"./assets/home/img/linkedin.png"},
-            {"name":"jobs sheet",
-                "url":"https://docs.google.com/spreadsheets/d/1wqpDgKlCEfiFxRcMA1JigcGIiif98zS40_5Ew3IAMjw/edit#gid=815296917",
-                "img":"./assets/home/img/sheet.png"},
-            {"name":"Violet Network",
-                "url":"https://violetnetwork.nyu.edu/hub/nyuwide/home-v3",
-                "img":"./assets/home/img/nyuvn.png"},
-            {"name":"Wasserman center career",
-                "url":"https://www.nyu.edu/students/student-information-and-resources/career-development-and-jobs.html",
-                "img":"./assets/home/img/nyuwc.png"}
-        ]},
+            "name": "Work",
+            "img": "./assets/home/img/work.png",
+            "bookmark": [
+                {
+                    "name": "LinkedIn",
+                    "url": "https://www.linkedin.com/feed/",
+                    "img": "./assets/home/img/linkedin.png"
+                }
+            ]
+        },
         {
-            "name" : "Social",
-            "img":"./assets/home/img/social.png",
-            "bookmark" : [
-            {"name":"buildinglink bulletin",
-                "url":"https://buildinglink.com/v2/tenant/postings/postingareas.aspx?typeid=2",
-                "img":"./assets/home/img/bldg.png"},
-            {"name":"channel yt",
-                "url":"https://studio.youtube.com/channel/UCaxeeYHYr961k3nVwutOr_g/videos/upload?filter=%5B%5D&sort=%7B%22columnType%22%3A%22date%22%2C%22sortOrder%22%3A%22DESCENDING%22%7D",
-                "img":"./assets/home/img/youtubechannel.png"},
-            {"name":"NYT New York Times News",
-                  "url":"https://www.nytimes.com",
-                  "img":"./assets/home/img/nyt.png"},
-            {"name":"Artcards exhibitions",
-                "url":"http://artcards.cc",
-                "img":"./assets/home/img/artcards.png"},
-            {"name":"Timesout timeout",
-                "url":"https://www.timeout.com/newyork",
-                "img":"./assets/home/img/timeout.png"}
-        ]},
+            "name": "Social",
+            "img": "./assets/home/img/social.png",
+            "bookmark": [
+                {
+                    "name": "NYT New York Times News",
+                    "url": "https://www.nytimes.com",
+                    "img": "./assets/home/img/nyt.png"
+                },
+                {
+                    "name": "Artcards exhibitions",
+                    "url": "http://artcards.cc",
+                    "img": "./assets/home/img/artcards.png"
+                },
+                {
+                    "name": "Timesout timeout",
+                    "url": "https://www.timeout.com/newyork",
+                    "img": "./assets/home/img/timeout.png"
+                }
+            ]
+        },
         {
-            "name" : "Study",
-            "img":"./assets/home/img/study.png",
-            "bookmark" : [
-            {"name":"NYU Home",
-                "url":"https://globalhome.nyu.edu/services/favorites",
-                "img":"./assets/home/img/nyu.png"},
-            {"name":"Albert",
-                "url":"http://albert.nyu.edu/albert_index.html",
-                "img":"./assets/home/img/albert.png"},
-            {"name":"LMS Brightspace NYU Classes",
-                "url":"https://brightspace.nyu.edu/d2l/home",
-                "img":"./assets/home/img/nyulms.png"},
-            {"name":"EasyBib",
-                "url":"https://www.easybib.com",
-                "img":"./assets/home/img/easybib.png"},
-            {"name":"senior project google space gmail",
-                "url":"https://mail.google.com/mail/u/1/#chat/space/AAAAx7uLh_s",
-                "img":"./assets/home/img/gspaces.png"},
-            {"name":"UX design slack",
-                "url":"https://ux-design-nyu-ss23.slack.com/archives/C04L2N2FNPP",
-                "img":"./assets/home/img/slack.png"},
-            {"name":"UX design notion",
-                "url":"https://nyu-ux-ss23.notion.site/nyu-ux-ss23/UX-Design-NYU-SS23-952d9ed2899740e4b341647681e8cf01",
-                "img":"./assets/home/img/notion.png"},
-            {"name":"cargo site portfolio edit",
-                "url":"https://alextyang.cargo.site/admin",
-                "img":"./assets/home/img/cargosite.png"},
-            {"name":"senior project gitbook notebook",
-                "url":"https://carla-gannis.gitbook.io/idm-senior-project-spring-2023-gannis/",
-                "img":"./assets/home/img/gitbook.png"}
-        ]},
+            "name": "Code",
+            "img": "./assets/home/img/code.png",
+            "bookmark": [
+                {
+                    "name": "Github",
+                    "url": "https://github.com/alextyang?tab=repositories",
+                    "img": "./assets/home/img/github.png"
+                },
+                {
+                    "name": "Text Mechanic",
+                    "url": "https://textmechanic.com",
+                    "img": "./assets/home/img/textmechanic.png"
+                },
+                {
+                    "name": "Web Flowchart",
+                    "url": "https://andreasbm.github.io/web-skills/?compact",
+                    "img": "./assets/home/img/webtree.png"
+                },
+                {
+                    "name": "MDN docs",
+                    "url": "https://developer.mozilla.org/en-US/",
+                    "img": "./assets/home/img/mdn.png"
+                },
+                {
+                    "name": "CSS Guide",
+                    "url": "https://css-tricks.com/snippets/css/",
+                    "img": "./assets/home/img/css.png"
+                }
+            ]
+        },
         {
-            "name" : "Design",
-            "img":"./assets/home/img/design.png",
-            "bookmark" : [
-            {"name":"portfolio alexyang",
-                "url":"https://alexyang.us/portfolio",
-                "img":"./assets/home/img/cargo.png"},
-            {"name":"Adobe Fonts",
-                "url":"https://fonts.adobe.com/fonts",
-                "img":"./assets/home/img/adobefonts.png"},
-            {"name":"fontbrief fontsearch",
-                "url":"https://www.fontbrief.com/fontbrief",
-                "img":"./assets/home/img/fontbrief.png"},
-            {"name":"Coolors Color Palette",
-                "url":"https://coolors.co/generate",
-                "img":"./assets/home/img/coolors.png"},
-            {"name":"Google arts and culture",
-                "url":"https://artsandculture.google.com/explore",
-                "img":"./assets/home/img/artsculture.png"}
-        ]},
+            "name": "Design",
+            "img": "./assets/home/img/design.png",
+            "bookmark": [
+                {
+                    "name": "portfolio alexyang",
+                    "url": "https://alexyang.us/portfolio",
+                    "img": "./assets/home/img/cargo.png"
+                },
+                {
+                    "name": "Adobe Fonts",
+                    "url": "https://fonts.adobe.com/fonts",
+                    "img": "./assets/home/img/adobefonts.png"
+                },
+                {
+                    "name": "fontbrief fontsearch",
+                    "url": "https://www.fontbrief.com/fontbrief",
+                    "img": "./assets/home/img/fontbrief.png"
+                },
+                {
+                    "name": "Coolors Color Palette",
+                    "url": "https://coolors.co/generate",
+                    "img": "./assets/home/img/coolors.png"
+                },
+                {
+                    "name": "Google arts and culture",
+                    "url": "https://artsandculture.google.com/explore",
+                    "img": "./assets/home/img/artsculture.png"
+                }
+            ]
+        },
         {
-            "name" : "Sound",
-            "img":"./assets/home/img/sound.png",
-            "bookmark" : [
-            {"name":"Genius",
-                "url":"https://genius.com",
-                "img":"./assets/home/img/genius.png"},
-            {"name":"ratemymusic rateyourmusic",
-                "url":"https://rateyourmusic.com/new-music/",
-                "img":"./assets/home/img/rateyourmusic.png"},
-            {"name":"freesound",
-                "url":"https://freesound.org",
-                "img":"./assets/home/img/freesound.png"}
-        ]},
+            "name": "Sound",
+            "img": "./assets/home/img/sound.png",
+            "bookmark": [
+                {
+                    "name": "Genius",
+                    "url": "https://genius.com",
+                    "img": "./assets/home/img/genius.png"
+                },
+                {
+                    "name": "ratemymusic rateyourmusic",
+                    "url": "https://rateyourmusic.com/new-music/",
+                    "img": "./assets/home/img/rateyourmusic.png"
+                },
+                {
+                    "name": "freesound",
+                    "url": "https://freesound.org",
+                    "img": "./assets/home/img/freesound.png"
+                }
+            ]
+        },
         {
-            "name" : "Code",
-            "img":"./assets/home/img/code.png",
-            "bookmark" : [
-            {"name":"Github",
-                "url":"https://github.com/alextyang?tab=repositories",
-                "img":"./assets/home/img/github.png"},
-            {"name":"Text Mechanic",
-                "url":"https://textmechanic.com",
-                "img":"./assets/home/img/textmechanic.png"},
-            {"name":"Web Flowchart",
-                "url":"https://andreasbm.github.io/web-skills/?compact",
-                "img":"./assets/home/img/webtree.png"},
-            {"name":"MDN docs",
-                "url":"https://developer.mozilla.org/en-US/",
-                "img":"./assets/home/img/mdn.png"},
-            {"name":"CSS Guide",
-                "url":"https://css-tricks.com/snippets/css/",
-                "img":"./assets/home/img/css.png"}
-        ]},
+            "name": "Cook",
+            "img": "./assets/home/img/cook.png",
+            "bookmark": [
+                {
+                    "name": "precycle groceries",
+                    "url": "https://www.precyclenyc.com",
+                    "img": "./assets/home/img/precycle.png"
+                },
+                {
+                    "name": "Happy Cow vegan reviews",
+                    "url": "https://www.happycow.net",
+                    "img": "./assets/home/img/happycow.png"
+                },
+                {
+                    "name": "yelp",
+                    "url": "https://www.yelp.com",
+                    "img": "./assets/home/img/yelp.png"
+                }
+            ]
+        },
         {
-            "name" : "Cook",
-            "img":"./assets/home/img/cook.png",
-            "bookmark" : [
-            {"name":"precycle groceries",
-                "url":"https://www.precyclenyc.com",
-                "img":"./assets/home/img/precycle.png"},
-            {"name":"Happy Cow vegan reviews",
-                "url":"https://www.happycow.net",
-                "img":"./assets/home/img/happycow.png"},
-            {"name":"yelp",
-                "url":"https://www.yelp.com",
-                "img":"./assets/home/img/yelp.png"}
-        ]},
+            "name": "Medical",
+            "img": "./assets/home/img/medicine.png",
+            "bookmark": [
+                {
+                    "name": "One Medical",
+                    "url": "https://app.onemedical.com/",
+                    "img": "./assets/home/img/onemedical.png"
+                },
+                {
+                    "name": "Anthem Insurance",
+                    "url": "https://membersecure.anthem.com/member/dashboard",
+                    "img": "./assets/home/img/anthem.png"
+                }
+            ]
+        },
         {
-            "name" : "Medical",
-            "img":"./assets/home/img/medicine.png",
-            "bookmark" : [
-            {"name":"Humantold therapy meet",
-                "url":"https://meet.humantold.com",
-                "img":"./assets/home/img/humantold.png"},
-            {"name":"One Medical",
-                "url":"https://app.onemedical.com/",
-                "img":"./assets/home/img/onemedical.png"},
-            {"name":"Student Health Center SHC NYU",
-                "url":"https://shcportal.nyu.edu/home.aspx",
-                "img":"./assets/home/img/shc.png"},
-            {"name":"Anthem Insurance",
-                "url":"https://membersecure.anthem.com/member/dashboard",
-                "img":"./assets/home/img/anthem.png"}
-        ]},
+            "name": "Watch",
+            "img": "./assets/home/img/watch.png",
+            "bookmark": [
+                {
+                    "name": "Audible",
+                    "url": "https://www.audible.com/library/titles",
+                    "img": "./assets/home/img/audible.png"
+                },
+                {
+                    "name": "Youtube",
+                    "url": "https://www.youtube.com/feed/subscriptions",
+                    "img": "./assets/home/img/youtube.png"
+                },
+                {
+                    "name": "Twitch",
+                    "url": "https://www.twitch.tv",
+                    "img": "./assets/home/img/twitch.png"
+                },
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/browse",
+                    "img": "./assets/home/img/netflix.png"
+                },
+                {
+                    "name": "Disney Plus",
+                    "url": "https://www.disneyplus.com/home",
+                    "img": "./assets/home/img/disneyplus.png"
+                },
+                {
+                    "name": "hulu",
+                    "url": "https://www.hulu.com/hub/home",
+                    "img": "./assets/home/img/hulu.png"
+                }
+            ]
+        },
         {
-            "name" : "Watch",
-            "img":"./assets/home/img/watch.png",
-            "bookmark" : [
-            {"name":"Audible",
-                "url":"https://www.audible.com/library/titles",
-                "img":"./assets/home/img/audible.png"},
-            {"name":"wnyu student radio",
-                "url":"https://wnyu.org",
-                "img":"./assets/home/img/wnyu.png"},
-            {"name":"nyt podcasts daily",
-                "url":"https://www.nytimes.com/spotlight/podcasts",
-                "img":"./assets/home/img/nyt.png"},
-            {"name":"Youtube",
-                "url":"https://www.youtube.com/feed/subscriptions",
-                "img":"./assets/home/img/youtube.png"},
-            {"name":"Twitch",
-                "url":"https://www.twitch.tv",
-                "img":"./assets/home/img/twitch.png"},
-            {"name":"Netflix",
-                "url":"https://www.netflix.com/browse",
-                "img":"./assets/home/img/netflix.png"},
-            {"name":"Disney Plus",
-                "url":"https://www.disneyplus.com/home",
-                "img":"./assets/home/img/disneyplus.png"},
-            {"name":"hulu",
-                "url":"https://www.hulu.com/hub/home",
-                "img":"./assets/home/img/hulu.png"},
-            {"name":"showtime",
-                "url":"https://www.showtime.com/home",
-                "img":"./assets/home/img/showtime.png"}
-        ]},
+            "name": "Shop",
+            "img": "./assets/home/img/shop.png",
+            "bookmark": [
+                {
+                    "name": "Amazon",
+                    "url": "https://smile.amazon.com",
+                    "img": "./assets/home/img/amazon.png"
+                },
+                {
+                    "name": "Target",
+                    "url": "https://target.com",
+                    "img": "./assets/home/img/target.png"
+                },
+                {
+                    "name": "grove",
+                    "url": "https://www.grove.co",
+                    "img": "./assets/home/img/grove.png"
+                }
+            ]
+        },
         {
-            "name" : "Shop",
-            "img":"./assets/home/img/shop.png",
-            "bookmark" : [
-            {"name":"Unidays",
-                "url":"https://www.myunidays.com/US/en-US",
-                "img":"./assets/home/img/unidays.png"},
-            {"name":"Amazon",
-                "url":"https://smile.amazon.com",
-                "img":"./assets/home/img/amazon.png"},
-            {"name":"Target",
-                "url":"https://target.com",
-                "img":"./assets/home/img/target.png"},
-            {"name":"grove",
-                "url":"https://www.grove.co",
-                "img":"./assets/home/img/grove.png"}
-        ]},
-        {
-            "name" : "Utilities",
-            "img":"./assets/home/img/utilities.png",
-            "bookmark" : [
-            {"name":"Anon Temp mail email",
-                "url":"https://app.anonaddy.com",
-                "img":"./assets/home/img/anonaddy.png"},
-            {"name":"Cloud Convert file",
-                "url":"https://cloudconvert.com",
-                "img":"./assets/home/img/cloudconvert.png"},
-            {"name":"Translate",
-                "url":"https://translate.google.com",
-                "img":"./assets/home/img/googletranslate.png"}
-        ]}
+            "name": "Utilities",
+            "img": "./assets/home/img/utilities.png",
+            "bookmark": [
+                {
+                    "name": "Anon Temp mail email",
+                    "url": "https://app.anonaddy.com",
+                    "img": "./assets/home/img/anonaddy.png"
+                },
+                {
+                    "name": "Cloud Convert file",
+                    "url": "https://cloudconvert.com",
+                    "img": "./assets/home/img/cloudconvert.png"
+                },
+                {
+                    "name": "Translate",
+                    "url": "https://translate.google.com",
+                    "img": "./assets/home/img/googletranslate.png"
+                }
+            ]
+        }
     ]
 }
