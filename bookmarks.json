@@ -29,6 +29,11 @@
                     "name": "LinkedIn",
                     "url": "https://www.linkedin.com/feed/",
                     "img": "./assets/home/img/linkedin.png"
+                },
+                {
+                    "name": "Glassdoor",
+                    "url": "https://www.glassdoor.com/Reviews/index.htm",
+                    "img": "./assets/home/img/glassdoor.png"
                 }
             ]
         },
@@ -54,6 +59,58 @@
             ]
         },
         {
+            "name": "Write",
+            "img": "./assets/home/img/write.png",
+            "bookmark": [
+                {
+                    "name": "Onelook thesaurus",
+                    "url": "https://www.onelook.com/reverse-dictionary.shtml?",
+                    "img": "./assets/home/img/onelook.png"
+                },
+                {
+                    "name": "ChatGPT",
+                    "url": "https://app.chatgpt.com",
+                    "img": "./assets/home/img/chatgpt.png"
+                },
+                {
+                    "name": "Rhymezone",
+                    "url": "https://www.rhymezone.com",
+                    "img": "./assets/home/img/rhymezone.png"
+                },
+                {
+                    "name": "Spruce quotes proverbs",
+                    "url": "https://www.onelook.com/spruce/",
+                    "img": "./assets/home/img/spruce.png"
+                }
+            ]
+        },
+        {
+            "name": "Projects",
+            "img": "./assets/home/img/projects.png",
+            "bookmark": [
+                {
+                    "name": "Portfolio",
+                    "url": "https://alexya.ng",
+                    "img": "./assets/home/img/portfolio.png"
+                },
+                {
+                    "name": "Active Listener",
+                    "url": "https://activelistener.alexya.ng",
+                    "img": "./assets/home/img/activelistener.png"
+                },
+                {
+                    "name": "Accountable Brands",
+                    "url": "https://accountablebrand.org",
+                    "img": "./assets/home/img/collabaccountablebrands.png"
+                },
+                {
+                    "name": "Accountable Brands Collaborative",
+                    "url": "https://collab.accountablebrand.org",
+                    "img": "./assets/home/img/accountablebrands.png"
+                }
+            ]
+        },
+        {
             "name": "Code",
             "img": "./assets/home/img/code.png",
             "bookmark": [
@@ -61,6 +118,36 @@
                     "name": "Github",
                     "url": "https://github.com/alextyang?tab=repositories",
                     "img": "./assets/home/img/github.png"
+                },
+                {
+                    "name": "Cloudflare",
+                    "url": "https://dash.cloudflare.com",
+                    "img": "./assets/home/img/cloudflare.png"
+                },
+                {
+                    "name": "Google cloud",
+                    "url": "https://console.cloud.google.com",
+                    "img": "./assets/home/img/googlecloud.png"
+                },
+                {
+                    "name": "Vercel",
+                    "url": "https://vercel.com/dashboard",
+                    "img": "./assets/home/img/vercel.png"
+                },
+                {
+                    "name": "Digital Ocean",
+                    "url": "https://cloud.digitalocean.com",
+                    "img": "./assets/home/img/digitalocean.png"
+                },
+                {
+                    "name": "Search Console",
+                    "url": "https://search.google.com/search-console",
+                    "img": "./assets/home/img/searchconsole.png"
+                },
+                {
+                    "name": "Google analytics",
+                    "url": "https://analytics.google.com/analytics/web/",
+                    "img": "./assets/home/img/googleanalytics.png"
                 },
                 {
                     "name": "Text Mechanic",
@@ -89,14 +176,14 @@
             "img": "./assets/home/img/design.png",
             "bookmark": [
                 {
-                    "name": "portfolio alexyang",
-                    "url": "https://alexyang.us/portfolio",
-                    "img": "./assets/home/img/cargo.png"
-                },
-                {
                     "name": "Adobe Fonts",
                     "url": "https://fonts.adobe.com/fonts",
                     "img": "./assets/home/img/adobefonts.png"
+                },
+                {
+                    "name": "Adobe Font Type Ripper",
+                    "url": "http://badnoise.net/TypeRip/",
+                    "img": "./assets/home/img/typerip.png"
                 },
                 {
                     "name": "fontbrief fontsearch",
@@ -109,9 +196,19 @@
                     "img": "./assets/home/img/coolors.png"
                 },
                 {
-                    "name": "Google arts and culture",
-                    "url": "https://artsandculture.google.com/explore",
-                    "img": "./assets/home/img/artsculture.png"
+                    "name": "Supershapes generator",
+                    "url": "https://andrewmarsh.com/apps/releases/supershapes.html",
+                    "img": "./assets/home/img/supershapes.png"
+                },
+                {
+                    "name": "Mockup world",
+                    "url": "https://www.mockupworld.co",
+                    "img": "./assets/home/img/mockupworld.png"
+                },
+                {
+                    "name": "Laws of UX",
+                    "url": "https://lawsofux.com",
+                    "img": "./assets/home/img/lawsofux.png"
                 }
             ]
         },
@@ -119,16 +216,6 @@
             "name": "Sound",
             "img": "./assets/home/img/sound.png",
             "bookmark": [
-                {
-                    "name": "Genius",
-                    "url": "https://genius.com",
-                    "img": "./assets/home/img/genius.png"
-                },
-                {
-                    "name": "ratemymusic rateyourmusic",
-                    "url": "https://rateyourmusic.com/new-music/",
-                    "img": "./assets/home/img/rateyourmusic.png"
-                },
                 {
                     "name": "freesound",
                     "url": "https://freesound.org",
@@ -140,6 +227,11 @@
             "name": "Cook",
             "img": "./assets/home/img/cook.png",
             "bookmark": [
+                {
+                    "name": "nyt cooking",
+                    "url": "https://cooking.nytimes.com",
+                    "img": "./assets/home/img/nytcooking.png"
+                },
                 {
                     "name": "precycle groceries",
                     "url": "https://www.precyclenyc.com",
@@ -167,6 +259,11 @@
                     "img": "./assets/home/img/onemedical.png"
                 },
                 {
+                    "name": "CVS",
+                    "url": "https://www.cvs.com",
+                    "img": "./assets/home/img/cvs.png"
+                },
+                {
                     "name": "Anthem Insurance",
                     "url": "https://membersecure.anthem.com/member/dashboard",
                     "img": "./assets/home/img/anthem.png"
@@ -174,14 +271,88 @@
             ]
         },
         {
-            "name": "Watch",
-            "img": "./assets/home/img/watch.png",
+            "name": "Home",
+            "img": "./assets/home/img/home.png",
             "bookmark": [
+                {
+                    "name": "Verizon Fios",
+                    "url": "https://www.verizon.com/home/myverizon/",
+                    "img": "./assets/home/img/verizon.png"
+                },
+                {
+                    "name": "ConEd",
+                    "url": "https://www.coned.com/en",
+                    "img": "./assets/home/img/coned.png"
+                }
+            ]
+        },
+        {
+            "name": "Read",
+            "img": "./assets/home/img/read.png",
+            "bookmark": [
+                {
+                    "name": "Libgen books",
+                    "url": "https://libgen.is",
+                    "img": "./assets/home/img/libgen.png"
+                },
+                {
+                    "name": "Philosophy plato stanford",
+                    "url": "https://plato.stanford.edu/index.html",
+                    "img": "./assets/home/img/plato.png"
+                },
                 {
                     "name": "Audible",
                     "url": "https://www.audible.com/library/titles",
                     "img": "./assets/home/img/audible.png"
+                }
+            ]
+        },
+        {
+            "name": "Art",
+            "img": "./assets/home/img/art.png",
+            "bookmark": [
+                {
+                    "name": "Google arts and culture",
+                    "url": "https://artsandculture.google.com/explore",
+                    "img": "./assets/home/img/artsculture.png"
+                }
+            ]
+        },
+        {
+            "name": "Listen",
+            "img": "./assets/home/img/listen.png",
+            "bookmark": [
+                {
+                    "name": "MyNoise",
+                    "url": "https://mynoise.net/noiseMachines.php",
+                    "img": "./assets/home/img/mynoise.png"
                 },
+                {
+                    "name": "Genius",
+                    "url": "https://genius.com",
+                    "img": "./assets/home/img/genius.png"
+                },
+                {
+                    "name": "ratemymusic rateyourmusic",
+                    "url": "https://rateyourmusic.com/new-music/",
+                    "img": "./assets/home/img/rateyourmusic.png"
+                },
+                {
+                    "name": "playlist analyzer chosic",
+                    "url": "https://www.chosic.com/spotify-playlist-analyzer/",
+                    "img": "./assets/home/img/chosic.png"
+                },
+                {
+                    "name": "Every noise",
+                    "url": "https://everynoise.com",
+                    "img": "./assets/home/img/everynoise.png"
+                }
+            ]
+        },
+        {
+            "name": "Watch",
+            "img": "./assets/home/img/watch.png",
+            "bookmark": [
                 {
                     "name": "Youtube",
                     "url": "https://www.youtube.com/feed/subscriptions",
@@ -210,6 +381,37 @@
             ]
         },
         {
+            "name": "Game",
+            "img": "./assets/home/img/game.png",
+            "bookmark": [
+                {
+                    "name": "Geoguessr",
+                    "url": "https://www.geoguessr.com",
+                    "img": "./assets/home/img/geoguessr.png"
+                },
+                {
+                    "name": "Trivia Generator",
+                    "url": "https://www.randomtriviagenerator.com",
+                    "img": "./assets/home/img/triviagenerator.png"
+                },
+                {
+                    "name": "Modrinth",
+                    "url": "https://modrinth.com",
+                    "img": "./assets/home/img/modrinth.png"
+                },
+                {
+                    "name": "Minecraft wiki",
+                    "url": "https://minecraft.wiki",
+                    "img": "./assets/home/img/minecraft.png"
+                },
+                {
+                    "name": "Stardew Valley wiki",
+                    "url": "https://stardewvalleywiki.com",
+                    "img": "./assets/home/img/stardewvalley.png"
+                }
+            ]
+        },
+        {
             "name": "Shop",
             "img": "./assets/home/img/shop.png",
             "bookmark": [
@@ -231,13 +433,39 @@
             ]
         },
         {
+            "name": "Travel",
+            "img": "./assets/home/img/travel.png",
+            "bookmark": [
+                {
+                    "name": "Rome to rio",
+                    "url": "https://www.rome2rio.com",
+                    "img": "./assets/home/img/rometorio.png"
+                },
+                {
+                    "name": "Google Flights",
+                    "url": "https://www.google.com/flights",
+                    "img": "./assets/home/img/googleflights.png"
+                },
+                {
+                    "name": "Atlas Obscura",
+                    "url": "https://www.atlasobscura.com",
+                    "img": "./assets/home/img/atlasobscura.png"
+                }
+            ]
+        },
+        {
             "name": "Utilities",
             "img": "./assets/home/img/utilities.png",
             "bookmark": [
                 {
                     "name": "Anon Temp mail email",
-                    "url": "https://app.anonaddy.com",
+                    "url": "https://temp-mail.org/en/",
                     "img": "./assets/home/img/anonaddy.png"
+                },
+                {
+                    "name": "Sharedrop file airdrop",
+                    "url": "https://sharedrop.io",
+                    "img": "./assets/home/img/sharedrop.png"
                 },
                 {
                     "name": "Cloud Convert file",
@@ -248,6 +476,21 @@
                     "name": "Translate",
                     "url": "https://translate.google.com",
                     "img": "./assets/home/img/googletranslate.png"
+                },
+                {
+                    "name": "Internet Archive Wayback Machine",
+                    "url": "https://web.archive.org",
+                    "img": "./assets/home/img/internetarchive.png"
+                },
+                {
+                    "name": "Airplane Tracker",
+                    "url": "https://globe.adsbexchange.com",
+                    "img": "./assets/home/img/adsb.png"
+                },
+                {
+                    "name": "Mac Apps",
+                    "url": "https://appstorrent.ru/",
+                    "img": "./assets/home/img/appstorrent.png"
                 }
             ]
         }
