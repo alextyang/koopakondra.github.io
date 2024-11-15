@@ -8,7 +8,7 @@ function handleKeyPress(e) {
         search(text);
     }
 
-    if (text.trim().length < 2 && key === 8){
+    if (text.trim().length < 2 && key === 8) {
         document.getElementById("keywords").style = "border-color: rgba(159, 159, 159, 1);";
     }
     else {
@@ -53,7 +53,7 @@ function containsProtocol(str) {
     return !!pattern.test(str);
 }
 
-String.prototype.replaceAll = function(search, replacement) {
+String.prototype.replaceAll = function (search, replacement) {
     var target = this;
     return target.split(search).join(replacement);
 };

@@ -1,191 +1,191 @@
-SunCalc = (function() {
-	var J1970 = 2440588,
-		J2000 = 2451545,
-		deg2rad = Math.PI / 180,
-		M0 = 357.5291 * deg2rad,
-		M1 = 0.98560028 * deg2rad,
-		J0 = 0.0009,
-		J1 = 0.0053,
-		J2 = -0.0069,
-		C1 = 1.9148 * deg2rad,
-		C2 = 0.0200 * deg2rad,
-		C3 = 0.0003 * deg2rad,
-		P = 102.9372 * deg2rad,
-		e = 23.45 * deg2rad,
-		th0 = 280.1600 * deg2rad,
-		th1 = 360.9856235 * deg2rad,
-		h0 = -0.83 * deg2rad, //sunset angle
-		d0 = 0.53 * deg2rad, //sun diameter
-		h1 = -6 * deg2rad, //nautical twilight angle
-		h2 = -12 * deg2rad, //astronomical twilight angle
-		h3 = -18 * deg2rad //darkness angle
-		msInDay = 1000 * 60 * 60 * 24;
+SunCalc = (function () {
+    var J1970 = 2440588,
+        J2000 = 2451545,
+        deg2rad = Math.PI / 180,
+        M0 = 357.5291 * deg2rad,
+        M1 = 0.98560028 * deg2rad,
+        J0 = 0.0009,
+        J1 = 0.0053,
+        J2 = -0.0069,
+        C1 = 1.9148 * deg2rad,
+        C2 = 0.0200 * deg2rad,
+        C3 = 0.0003 * deg2rad,
+        P = 102.9372 * deg2rad,
+        e = 23.45 * deg2rad,
+        th0 = 280.1600 * deg2rad,
+        th1 = 360.9856235 * deg2rad,
+        h0 = -0.83 * deg2rad, //sunset angle
+        d0 = 0.53 * deg2rad, //sun diameter
+        h1 = -6 * deg2rad, //nautical twilight angle
+        h2 = -12 * deg2rad, //astronomical twilight angle
+        h3 = -18 * deg2rad //darkness angle
+    msInDay = 1000 * 60 * 60 * 24;
 
-	function dateToJulianDate( date ) {
-		return date.valueOf() / msInDay - 0.5 + J1970;
-	}
+    function dateToJulianDate(date) {
+        return date.valueOf() / msInDay - 0.5 + J1970;
+    }
 
-	function julianDateToDate( j ) {
-		return new Date((j + 0.5 - J1970) * msInDay);
-	}
+    function julianDateToDate(j) {
+        return new Date((j + 0.5 - J1970) * msInDay);
+    }
 
-	function getJulianCycle( J, lw ) {
-		return Math.round(J - J2000 - J0 - lw/(2 * Math.PI));
-	}
+    function getJulianCycle(J, lw) {
+        return Math.round(J - J2000 - J0 - lw / (2 * Math.PI));
+    }
 
-	function getApproxSolarTransit( Ht, lw, n ) {
-		return J2000 + J0 + (Ht + lw)/(2 * Math.PI) + n;
-	}
+    function getApproxSolarTransit(Ht, lw, n) {
+        return J2000 + J0 + (Ht + lw) / (2 * Math.PI) + n;
+    }
 
-	function getSolarMeanAnomaly( Js ) {
-		return M0 + M1 * (Js - J2000);
-	}
+    function getSolarMeanAnomaly(Js) {
+        return M0 + M1 * (Js - J2000);
+    }
 
-	function getEquationOfCenter( M ) {
-		return C1 * Math.sin(M) + C2 * Math.sin(2 * M) + C3 * Math.sin(3 * M);
-	}
+    function getEquationOfCenter(M) {
+        return C1 * Math.sin(M) + C2 * Math.sin(2 * M) + C3 * Math.sin(3 * M);
+    }
 
-	function getEclipticLongitude( M, C ) {
-		return M + P + C + Math.PI;
-	}
+    function getEclipticLongitude(M, C) {
+        return M + P + C + Math.PI;
+    }
 
-	function getSolarTransit( Js, M, Lsun ) {
-		return Js + (J1 * Math.sin(M)) + (J2 * Math.sin(2 * Lsun));
-	}
+    function getSolarTransit(Js, M, Lsun) {
+        return Js + (J1 * Math.sin(M)) + (J2 * Math.sin(2 * Lsun));
+    }
 
-	function getSunDeclination( Lsun ) {
-		return Math.asin(Math.sin(Lsun) * Math.sin(e));
-	}
+    function getSunDeclination(Lsun) {
+        return Math.asin(Math.sin(Lsun) * Math.sin(e));
+    }
 
-	function getRightAscension( Lsun ) {
-		return Math.atan2(Math.sin(Lsun) * Math.cos(e), Math.cos(Lsun));
-	}
+    function getRightAscension(Lsun) {
+        return Math.atan2(Math.sin(Lsun) * Math.cos(e), Math.cos(Lsun));
+    }
 
-	function getSiderealTime( J, lw ) {
-		return th0 + th1 * (J - J2000) - lw;
-	}
+    function getSiderealTime(J, lw) {
+        return th0 + th1 * (J - J2000) - lw;
+    }
 
-	function getAzimuth( th, a, phi, d ) {
-		var H = th - a;
-		return Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(phi) -
-				Math.tan(d) * Math.cos(phi));
-	}
+    function getAzimuth(th, a, phi, d) {
+        var H = th - a;
+        return Math.atan2(Math.sin(H), Math.cos(H) * Math.sin(phi) -
+            Math.tan(d) * Math.cos(phi));
+    }
 
-	function getAltitude( th, a, phi, d ) {
-		var H = th - a;
-		return Math.asin(Math.sin(phi) * Math.sin(d) +
-				Math.cos(phi) * Math.cos(d) * Math.cos(H));
-	}
+    function getAltitude(th, a, phi, d) {
+        var H = th - a;
+        return Math.asin(Math.sin(phi) * Math.sin(d) +
+            Math.cos(phi) * Math.cos(d) * Math.cos(H));
+    }
 
-	function getHourAngle( h, phi, d ) {
-		return Math.acos((Math.sin(h) - Math.sin(phi) * Math.sin(d)) /
-				(Math.cos(phi) * Math.cos(d)));
-	}
+    function getHourAngle(h, phi, d) {
+        return Math.acos((Math.sin(h) - Math.sin(phi) * Math.sin(d)) /
+            (Math.cos(phi) * Math.cos(d)));
+    }
 
-	function getSunsetJulianDate( w0, M, Lsun, lw, n ) {
-		return getSolarTransit(getApproxSolarTransit(w0, lw, n), M, Lsun);
-	}
+    function getSunsetJulianDate(w0, M, Lsun, lw, n) {
+        return getSolarTransit(getApproxSolarTransit(w0, lw, n), M, Lsun);
+    }
 
-	function getSunriseJulianDate( Jtransit, Jset ) {
-		return Jtransit - (Jset - Jtransit);
-	}
+    function getSunriseJulianDate(Jtransit, Jset) {
+        return Jtransit - (Jset - Jtransit);
+    }
 
-	function getSunPosition( J, lw, phi ) {
-		var M = getSolarMeanAnomaly(J),
-			C = getEquationOfCenter(M),
-			Lsun = getEclipticLongitude(M, C),
-			d = getSunDeclination(Lsun),
-			a = getRightAscension(Lsun),
-			th = getSiderealTime(J, lw);
+    function getSunPosition(J, lw, phi) {
+        var M = getSolarMeanAnomaly(J),
+            C = getEquationOfCenter(M),
+            Lsun = getEclipticLongitude(M, C),
+            d = getSunDeclination(Lsun),
+            a = getRightAscension(Lsun),
+            th = getSiderealTime(J, lw);
 
-		return {
-			azimuth: getAzimuth( th, a, phi, d ),
-			altitude: getAltitude( th, a, phi, d )
-		};
-	}
+        return {
+            azimuth: getAzimuth(th, a, phi, d),
+            altitude: getAltitude(th, a, phi, d)
+        };
+    }
 
-	return {
-		getDayInfo: function( date, lat, lng, detailed ) {
-			var lw = -lng * deg2rad,
-				phi = lat * deg2rad,
-				J = dateToJulianDate(date);
+    return {
+        getDayInfo: function (date, lat, lng, detailed) {
+            var lw = -lng * deg2rad,
+                phi = lat * deg2rad,
+                J = dateToJulianDate(date);
 
-			var n = getJulianCycle(J, lw),
-				Js = getApproxSolarTransit(0, lw, n),
-				M = getSolarMeanAnomaly(Js),
-				C = getEquationOfCenter(M),
-				Lsun = getEclipticLongitude(M, C),
-				d = getSunDeclination(Lsun),
-				Jtransit = getSolarTransit(Js, M, Lsun),
-				w0 = getHourAngle(h0, phi, d),
-				w1 = getHourAngle(h0 + d0, phi, d),
-				Jset = getSunsetJulianDate(w0, M, Lsun, lw, n),
-				Jsetstart = getSunsetJulianDate(w1, M, Lsun, lw, n),
-				Jrise = getSunriseJulianDate(Jtransit, Jset),
-				Jriseend = getSunriseJulianDate(Jtransit, Jsetstart),
-				w2 = getHourAngle(h1, phi, d),
-				Jnau = getSunsetJulianDate(w2, M, Lsun, lw, n),
-				Jciv2 = getSunriseJulianDate(Jtransit, Jnau);
+            var n = getJulianCycle(J, lw),
+                Js = getApproxSolarTransit(0, lw, n),
+                M = getSolarMeanAnomaly(Js),
+                C = getEquationOfCenter(M),
+                Lsun = getEclipticLongitude(M, C),
+                d = getSunDeclination(Lsun),
+                Jtransit = getSolarTransit(Js, M, Lsun),
+                w0 = getHourAngle(h0, phi, d),
+                w1 = getHourAngle(h0 + d0, phi, d),
+                Jset = getSunsetJulianDate(w0, M, Lsun, lw, n),
+                Jsetstart = getSunsetJulianDate(w1, M, Lsun, lw, n),
+                Jrise = getSunriseJulianDate(Jtransit, Jset),
+                Jriseend = getSunriseJulianDate(Jtransit, Jsetstart),
+                w2 = getHourAngle(h1, phi, d),
+                Jnau = getSunsetJulianDate(w2, M, Lsun, lw, n),
+                Jciv2 = getSunriseJulianDate(Jtransit, Jnau);
 
-			var info = {
-				dawn: julianDateToDate(Jciv2),
-				sunrise: {
-					start: julianDateToDate(Jrise),
-					end: julianDateToDate(Jriseend)
-				},
-				transit: julianDateToDate(Jtransit),
-				sunset: {
-					start: julianDateToDate(Jsetstart),
-					end: julianDateToDate(Jset)
-				},
-				dusk: julianDateToDate(Jnau)
-			};
+            var info = {
+                dawn: julianDateToDate(Jciv2),
+                sunrise: {
+                    start: julianDateToDate(Jrise),
+                    end: julianDateToDate(Jriseend)
+                },
+                transit: julianDateToDate(Jtransit),
+                sunset: {
+                    start: julianDateToDate(Jsetstart),
+                    end: julianDateToDate(Jset)
+                },
+                dusk: julianDateToDate(Jnau)
+            };
 
-			if (detailed) {
-				var w3 = getHourAngle(h2, phi, d),
-					w4 = getHourAngle(h3, phi, d),
-					Jastro = getSunsetJulianDate(w3, M, Lsun, lw, n),
-					Jdark = getSunsetJulianDate(w4, M, Lsun, lw, n),
-					Jnau2 = getSunriseJulianDate(Jtransit, Jastro),
-					Jastro2 = getSunriseJulianDate(Jtransit, Jdark);
+            if (detailed) {
+                var w3 = getHourAngle(h2, phi, d),
+                    w4 = getHourAngle(h3, phi, d),
+                    Jastro = getSunsetJulianDate(w3, M, Lsun, lw, n),
+                    Jdark = getSunsetJulianDate(w4, M, Lsun, lw, n),
+                    Jnau2 = getSunriseJulianDate(Jtransit, Jastro),
+                    Jastro2 = getSunriseJulianDate(Jtransit, Jdark);
 
-				info.morningTwilight = {
-					astronomical: {
-						start: julianDateToDate(Jastro2),
-						end: julianDateToDate(Jnau2)
-					},
-					nautical: {
-						start: julianDateToDate(Jnau2),
-						end: julianDateToDate(Jciv2)
-					},
-					civil: {
-						start: julianDateToDate(Jciv2),
-						end: julianDateToDate(Jrise)
-					}
-				};
-				info.nightTwilight = {
-					civil: {
-						start: julianDateToDate(Jset),
-						end: julianDateToDate(Jnau)
-					},
-					nautical: {
-						start: julianDateToDate(Jnau),
-						end: julianDateToDate(Jastro)
-					},
-					astronomical: {
-						start: julianDateToDate(Jastro),
-						end: julianDateToDate(Jdark)
-					}
-				};
-			}
+                info.morningTwilight = {
+                    astronomical: {
+                        start: julianDateToDate(Jastro2),
+                        end: julianDateToDate(Jnau2)
+                    },
+                    nautical: {
+                        start: julianDateToDate(Jnau2),
+                        end: julianDateToDate(Jciv2)
+                    },
+                    civil: {
+                        start: julianDateToDate(Jciv2),
+                        end: julianDateToDate(Jrise)
+                    }
+                };
+                info.nightTwilight = {
+                    civil: {
+                        start: julianDateToDate(Jset),
+                        end: julianDateToDate(Jnau)
+                    },
+                    nautical: {
+                        start: julianDateToDate(Jnau),
+                        end: julianDateToDate(Jastro)
+                    },
+                    astronomical: {
+                        start: julianDateToDate(Jastro),
+                        end: julianDateToDate(Jdark)
+                    }
+                };
+            }
 
-			return info;
-		},
+            return info;
+        },
 
-		getSunPosition: function( date, lat, lng ) {
-			return getSunPosition( dateToJulianDate(date), -lng * deg2rad, lat * deg2rad );
-		}
-	};
+        getSunPosition: function (date, lat, lng) {
+            return getSunPosition(dateToJulianDate(date), -lng * deg2rad, lat * deg2rad);
+        }
+    };
 })();
 
 /*
@@ -201,11 +201,12 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
 //! license : MIT
 //! momentjs.com
 
-;(function (global, factory) {
+; (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-    typeof define === 'function' && define.amd ? define(factory) :
-    global.moment = factory()
-}(this, (function () { 'use strict';
+        typeof define === 'function' && define.amd ? define(factory) :
+            global.moment = factory()
+}(this, (function () {
+    'use strict';
 
     var hookCallback;
 
@@ -510,10 +511,10 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
                 }
                 warn(
                     msg +
-                        '\nArguments: ' +
-                        Array.prototype.slice.call(args).join('') +
-                        '\n' +
-                        new Error().stack
+                    '\nArguments: ' +
+                    Array.prototype.slice.call(args).join('') +
+                    '\n' +
+                    new Error().stack
                 );
                 firstTime = false;
             }
@@ -561,8 +562,8 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
         // TODO: Remove "ordinalParse" fallback in next major release.
         this._dayOfMonthOrdinalParseLenient = new RegExp(
             (this._dayOfMonthOrdinalParse.source || this._ordinalParse.source) +
-                '|' +
-                /\d{1,2}/.source
+            '|' +
+            /\d{1,2}/.source
         );
     }
 
@@ -987,8 +988,8 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
         regexes[token] = isFunction(regex)
             ? regex
             : function (isStrict, localeData) {
-                  return isStrict && strictRegex ? strictRegex : regex;
-              };
+                return isStrict && strictRegex ? strictRegex : regex;
+            };
     }
 
     function getParseRegexForToken(token, config) {
@@ -1145,8 +1146,8 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
     // LOCALES
 
     var defaultLocaleMonths = 'January_February_March_April_May_June_July_August_September_October_November_December'.split(
-            '_'
-        ),
+        '_'
+    ),
         defaultLocaleMonthsShort = 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split(
             '_'
         ),
@@ -1163,10 +1164,10 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
         return isArray(this._months)
             ? this._months[m.month()]
             : this._months[
-                  (this._months.isFormat || MONTHS_IN_FORMAT).test(format)
-                      ? 'format'
-                      : 'standalone'
-              ][m.month()];
+            (this._months.isFormat || MONTHS_IN_FORMAT).test(format)
+                ? 'format'
+                : 'standalone'
+            ][m.month()];
     }
 
     function localeMonthsShort(m, format) {
@@ -1178,8 +1179,8 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
         return isArray(this._monthsShort)
             ? this._monthsShort[m.month()]
             : this._monthsShort[
-                  MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'
-              ][m.month()];
+            MONTHS_IN_FORMAT.test(format) ? 'format' : 'standalone'
+            ][m.month()];
     }
 
     function handleStrictParse(monthName, format, strict) {
@@ -1724,8 +1725,8 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
     }
 
     var defaultLocaleWeekdays = 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split(
-            '_'
-        ),
+        '_'
+    ),
         defaultLocaleWeekdaysShort = 'Sun_Mon_Tue_Wed_Thu_Fri_Sat'.split('_'),
         defaultLocaleWeekdaysMin = 'Su_Mo_Tu_We_Th_Fr_Sa'.split('_'),
         defaultWeekdaysRegex = matchWord,
@@ -1736,31 +1737,31 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
         var weekdays = isArray(this._weekdays)
             ? this._weekdays
             : this._weekdays[
-                  m && m !== true && this._weekdays.isFormat.test(format)
-                      ? 'format'
-                      : 'standalone'
-              ];
+            m && m !== true && this._weekdays.isFormat.test(format)
+                ? 'format'
+                : 'standalone'
+            ];
         return m === true
             ? shiftWeekdays(weekdays, this._week.dow)
             : m
-            ? weekdays[m.day()]
-            : weekdays;
+                ? weekdays[m.day()]
+                : weekdays;
     }
 
     function localeWeekdaysShort(m) {
         return m === true
             ? shiftWeekdays(this._weekdaysShort, this._week.dow)
             : m
-            ? this._weekdaysShort[m.day()]
-            : this._weekdaysShort;
+                ? this._weekdaysShort[m.day()]
+                : this._weekdaysShort;
     }
 
     function localeWeekdaysMin(m) {
         return m === true
             ? shiftWeekdays(this._weekdaysMin, this._week.dow)
             : m
-            ? this._weekdaysMin[m.day()]
-            : this._weekdaysMin;
+                ? this._weekdaysMin[m.day()]
+                : this._weekdaysMin;
     }
 
     function handleStrictParse$1(weekdayName, format, strict) {
@@ -2334,9 +2335,9 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
                 deprecateSimple(
                     'defineLocaleOverride',
                     'use moment.updateLocale(localeName, config) to change ' +
-                        'an existing locale. moment.defineLocale(localeName, ' +
-                        'config) should only be used for creating a new locale ' +
-                        'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.'
+                    'an existing locale. moment.defineLocale(localeName, ' +
+                    'config) should only be used for creating a new locale ' +
+                    'See http://momentjs.com/guides/#/warnings/define-locale/ for more info.'
                 );
                 parentConfig = locales[name]._config;
             } else if (config.parentLocale != null) {
@@ -2461,21 +2462,21 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
                 a[MONTH] < 0 || a[MONTH] > 11
                     ? MONTH
                     : a[DATE] < 1 || a[DATE] > daysInMonth(a[YEAR], a[MONTH])
-                    ? DATE
-                    : a[HOUR] < 0 ||
-                      a[HOUR] > 24 ||
-                      (a[HOUR] === 24 &&
-                          (a[MINUTE] !== 0 ||
-                              a[SECOND] !== 0 ||
-                              a[MILLISECOND] !== 0))
-                    ? HOUR
-                    : a[MINUTE] < 0 || a[MINUTE] > 59
-                    ? MINUTE
-                    : a[SECOND] < 0 || a[SECOND] > 59
-                    ? SECOND
-                    : a[MILLISECOND] < 0 || a[MILLISECOND] > 999
-                    ? MILLISECOND
-                    : -1;
+                        ? DATE
+                        : a[HOUR] < 0 ||
+                            a[HOUR] > 24 ||
+                            (a[HOUR] === 24 &&
+                                (a[MINUTE] !== 0 ||
+                                    a[SECOND] !== 0 ||
+                                    a[MILLISECOND] !== 0))
+                            ? HOUR
+                            : a[MINUTE] < 0 || a[MINUTE] > 59
+                                ? MINUTE
+                                : a[SECOND] < 0 || a[SECOND] > 59
+                                    ? SECOND
+                                    : a[MILLISECOND] < 0 || a[MILLISECOND] > 999
+                                        ? MILLISECOND
+                                        : -1;
 
             if (
                 getParsingFlags(m)._overflowDayOfYear &&
@@ -2736,8 +2737,8 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
 
     hooks.createFromInputFallback = deprecate(
         'value provided is not in a recognized RFC2822 or ISO format. moment construction falls back to js Date(), ' +
-            'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' +
-            'discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.',
+        'which is not reliable across all browsers and versions. Non RFC2822/ISO date formats are ' +
+        'discouraged. Please refer to http://momentjs.com/guides/#/warnings/js-date/ for more info.',
         function (config) {
             config._d = new Date(config._i + (config._useUTC ? ' UTC' : ''));
         }
@@ -2922,10 +2923,10 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
     }
 
     // constant that refers to the ISO standard
-    hooks.ISO_8601 = function () {};
+    hooks.ISO_8601 = function () { };
 
     // constant that refers to the RFC 2822 form
-    hooks.RFC_2822 = function () {};
+    hooks.RFC_2822 = function () { };
 
     // date from string and format string
     function configFromStringAndFormat(config) {
@@ -3223,16 +3224,16 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
     }
 
     var prototypeMin = deprecate(
-            'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
-            function () {
-                var other = createLocal.apply(null, arguments);
-                if (this.isValid() && other.isValid()) {
-                    return other < this ? this : other;
-                } else {
-                    return createInvalid();
-                }
+        'moment().min is deprecated, use moment.max instead. http://momentjs.com/guides/#/warnings/min-max/',
+        function () {
+            var other = createLocal.apply(null, arguments);
+            if (this.isValid() && other.isValid()) {
+                return other < this ? this : other;
+            } else {
+                return createInvalid();
             }
-        ),
+        }
+    ),
         prototypeMax = deprecate(
             'moment().max is deprecated, use moment.min instead. http://momentjs.com/guides/#/warnings/min-max/',
             function () {
@@ -3481,7 +3482,7 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
 
     // This function will be called whenever a moment is mutated.
     // It is intended to keep the offset in sync with the timezone.
-    hooks.updateOffset = function () {};
+    hooks.updateOffset = function () { };
 
     // MOMENTS
 
@@ -3764,11 +3765,11 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
                 deprecateSimple(
                     name,
                     'moment().' +
-                        name +
-                        '(period, number) is deprecated. Please use moment().' +
-                        name +
-                        '(number, period). ' +
-                        'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.'
+                    name +
+                    '(period, number) is deprecated. Please use moment().' +
+                    name +
+                    '(number, period). ' +
+                    'See http://momentjs.com/guides/#/warnings/add-inverted-param/ for more info.'
                 );
                 tmp = val;
                 val = period;
@@ -3907,16 +3908,16 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
         return diff < -6
             ? 'sameElse'
             : diff < -1
-            ? 'lastWeek'
-            : diff < 0
-            ? 'lastDay'
-            : diff < 1
-            ? 'sameDay'
-            : diff < 2
-            ? 'nextDay'
-            : diff < 7
-            ? 'nextWeek'
-            : 'sameElse';
+                ? 'lastWeek'
+                : diff < 0
+                    ? 'lastDay'
+                    : diff < 1
+                        ? 'sameDay'
+                        : diff < 2
+                            ? 'nextDay'
+                            : diff < 7
+                                ? 'nextWeek'
+                                : 'sameElse';
     }
 
     function calendar$1(time, formats) {
@@ -5343,12 +5344,12 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
                     toInt((number % 100) / 10) === 1
                         ? 'th'
                         : b === 1
-                        ? 'st'
-                        : b === 2
-                        ? 'nd'
-                        : b === 3
-                        ? 'rd'
-                        : 'th';
+                            ? 'st'
+                            : b === 2
+                                ? 'nd'
+                                : b === 3
+                                    ? 'rd'
+                                    : 'th';
             return number + output;
         },
     });
@@ -5872,135 +5873,154 @@ var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
 
 // gradient colors from https://cdpn.io/rDEAl
 var grads = [
-  [{color:"00000c",position:0},{color:"00000c",position:0}],
-  [{color:"020111",position:85},{color:"191621",position:100}],
-  [{color:"020111",position:60},{color:"20202c",position:100}],
-  [{color:"020111",position:10},{color:"3a3a52",position:100}],
-  [{color:"20202c",position:0},{color:"515175",position:100}],
-  [{color:"40405c",position:0},{color:"6f71aa",position:80},{color:"8a76ab",position:100}],
-  [{color:"4a4969",position:0},{color:"7072ab",position:50},{color:"cd82a0",position:100}],
-  [{color:"757abf",position:0},{color:"8583be",position:60},{color:"eab0d1",position:100}],
-  [{color:"82addb",position:0},{color:"ebb2b1",position:100}],
-  [{color:"94c5f8",position:1},{color:"a6e6ff",position:70},{color:"b1b5ea",position:100}],
-  [{color:"b7eaff",position:0},{color:"94dfff",position:100}],
-  [{color:"9be2fe",position:0},{color:"67d1fb",position:100}],
-  [{color:"90dffe",position:0},{color:"38a3d1",position:100}],
-  [{color:"57c1eb",position:0},{color:"246fa8",position:100}],
-  [{color:"2d91c2",position:0},{color:"1e528e",position:100}],
-  [{color:"2473ab",position:0},{color:"1e528e",position:70},{color:"5b7983",position:100}],
-  [{color:"1e528e",position:0},{color:"265889",position:50},{color:"9da671",position:100}],
-  [{color:"1e528e",position:0},{color:"728a7c",position:50},{color:"e9ce5d",position:100}],
-  [{color:"154277",position:0},{color:"576e71",position:30},{color:"e1c45e",position:70},{color:"b26339",position:100}],
-  [{color:"163C52",position:0},{color:"4F4F47",position:30},{color:"C5752D",position:60},{color:"B7490F",position:80},{color:"2F1107",position:100}],
-  [{color:"071B26",position:0},{color:"071B26",position:30},{color:"8A3B12",position:80},{color:"240E03",position:100}],
-  [{color:"010A10",position:30},{color:"59230B",position:80},{color:"2F1107",position:100}],
-  [{color:"090401",position:50},{color:"4B1D06",position:100}],
-  [{color:"00000c",position:80},{color:"150800",position:100}],
+    [{ color: "010A10", position: 30 }, { color: "59230B", position: 80 }, { color: "2F1107", position: 100 }],
+    [{ color: "090401", position: 50 }, { color: "4B1D06", position: 100 }],
+    [{ color: "00000c", position: 80 }, { color: "150800", position: 100 }],
+    [{ color: "00000c", position: 0 }, { color: "00000c", position: 0 }],
+    [{ color: "020111", position: 85 }, { color: "191621", position: 100 }],
+    [{ color: "020111", position: 60 }, { color: "20202c", position: 100 }],
+    [{ color: "020111", position: 10 }, { color: "3a3a52", position: 100 }],
+    [{ color: "20202c", position: 0 }, { color: "515175", position: 100 }],
+    [{ color: "40405c", position: 0 }, { color: "6f71aa", position: 80 }, { color: "8a76ab", position: 100 }],
+    [{ color: "4a4969", position: 0 }, { color: "7072ab", position: 50 }, { color: "cd82a0", position: 100 }],
+    [{ color: "757abf", position: 0 }, { color: "8583be", position: 60 }, { color: "eab0d1", position: 100 }],
+    [{ color: "82addb", position: 0 }, { color: "ebb2b1", position: 100 }],
+    [{ color: "94c5f8", position: 1 }, { color: "a6e6ff", position: 70 }, { color: "b1b5ea", position: 100 }],
+    [{ color: "b7eaff", position: 0 }, { color: "94dfff", position: 100 }],
+    [{ color: "9be2fe", position: 0 }, { color: "67d1fb", position: 100 }],
+    [{ color: "90dffe", position: 0 }, { color: "38a3d1", position: 100 }],
+    [{ color: "57c1eb", position: 0 }, { color: "246fa8", position: 100 }],
+    [{ color: "2d91c2", position: 0 }, { color: "1e528e", position: 100 }],
+    [{ color: "2473ab", position: 0 }, { color: "1e528e", position: 70 }, { color: "5b7983", position: 100 }],
+    [{ color: "1e528e", position: 0 }, { color: "265889", position: 50 }, { color: "9da671", position: 100 }],
+    [{ color: "1e528e", position: 0 }, { color: "728a7c", position: 50 }, { color: "e9ce5d", position: 100 }],
+    [{ color: "154277", position: 0 }, { color: "576e71", position: 30 }, { color: "e1c45e", position: 70 }, { color: "b26339", position: 100 }],
+    [{ color: "163C52", position: 0 }, { color: "4F4F47", position: 30 }, { color: "C5752D", position: 60 }, { color: "B7490F", position: 80 }, { color: "2F1107", position: 100 }],
+    [{ color: "071B26", position: 0 }, { color: "071B26", position: 30 }, { color: "8A3B12", position: 80 }, { color: "240E03", position: 100 }],
+];
+
+const testtime = 12;
+const banner = [
+    { color: "030405" },
+    { color: "090401" },
+    { color: "00000c" },
+    { color: "00000c" },
+    { color: "020111" },
+    { color: "020111" },
+    { color: "020111" },
+    { color: "20202c" },
+    { color: "40405c" },
+    { color: "4a4969" },
+    { color: "757abf" },
+    { color: "82addb" },
+    { color: "94c5f8" },
+    { color: "b7eaff" },
+    { color: "9be2fe" },
+    { color: "90dffe" },
+    { color: "57c1eb" },
+    { color: "2d91c2" },
+    { color: "2473ab" },
+    { color: "1e528e" },
+    { color: "1e528e" },
+    { color: "154277" },
+    { color: "163C52" },
+    { color: "071B26" },
 ];
 
 // "linear-gradient(to bottom, #020111 85%,#191621 100%)"
 // {color:"20202c",position:0},{color:"515175",position:100}
-function toCSSGradient(data)
-{
-  var css = "linear-gradient(115deg, ";
-  var len = data.length;
+function toCSSGradient(data) {
+    var css = "linear-gradient(175deg, " + "#" + data[0].color + " 0%, ";
+    var len = data.length;
+    const offset = 10;
 
-  for (var i=0;i<len;i++)
-  {
-     var item = data[i];
-     css+= " #" + item.color + " " + item.position + "%";
-     if ( i<len-1 ) css += ",";
-  }
-  console.log(css + ")");
-  return css + ")";
+    for (var i = 0; i < len; i++) {
+        var item = data[i];
+        css += " #" + item.color + " " + (item.position + offset) + "%";
+        if (i < len - 1) css += ",";
+    }
+    console.log(css + ")");
+    return css + ")";
 }
 
-function updateTime()
-{
-  d = moment();
-  d.local();
-  return d.hours();
+function updateTime() {
+    d = moment();
+    d.local();
+    return d.hours();
 }
 
-function updateBasedOnNow()
-{
-  setCSSGradientByIndex(updateTime());
+function updateBasedOnNow() {
+    setCSSGradientByIndex(updateTime());
 }
 
-function setCSSGradientByIndex(nInx)
-{
-  if ( nInx != inx )
-  {
-    inx = nInx;
-    var data = grads[inx];
-    if ( data == null ) return;
+function setCSSGradientByIndex(nInx) {
+    if (nInx != inx) {
+        inx = nInx;
+        var data = grads[inx];
+        if (data == null) return;
 
-    // convert data to gradient
-    var css = toCSSGradient(data);
+        // convert data to gradient
+        var css = toCSSGradient(data);
 
-    // update the background
-    document.getElementById("grad").style.background = css;
+        // update the background
+        document.getElementById("grad").style.background = css;
+        document.querySelector("body").style.background = css;
+
+        document.getElementById("theme-color").setAttribute('content', '#' + banner[inx].color);
+    }
+
+    // always set time
+    d.hours(inx);
+
+    // update in console 
+    console.log(d.format('[Just Good Design:\n]MMMM Do YYYY [\n]h:mm:ss a'));
 
 
-    // possible to change the foreground color on background change
-    //$("#gradInfo").css("color", "#fff");
-  }
-
-  // always set time
-  d.hours(inx);
-
-  // update in console
-  console.log(d.format('[Just Good Design:\n]MMMM Do YYYY [\n]h:mm:ss a'));
 }
 
 
 
-function getLocation()
-{
-  if (navigator.geolocation)
-  {
-            var timeoutVal = 10 * 1000 * 1000;
-            navigator.geolocation.getCurrentPosition(
-                    showLocation,
-                    function(){showLocation(defaultLocation);},
-                    { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
-            );
-  }
-  else
-  {
-     showLocation(defaultLocation);
-     alert("Geolocation is not supported by this browser");
-  }
+function getLocation() {
+    if (navigator.geolocation) {
+        var timeoutVal = 10 * 1000 * 1000;
+        navigator.geolocation.getCurrentPosition(
+            showLocation,
+            function () { showLocation(defaultLocation); },
+            { enableHighAccuracy: true, timeout: timeoutVal, maximumAge: 0 }
+        );
+    }
+    else {
+        showLocation(defaultLocation);
+        alert("Geolocation is not supported by this browser");
+    }
 }
 
-function showLocation(position)
-{
-  console.log(position);
-  getSunInfo(position.coords.latitude,position.coords.longitude);
+function showLocation(position) {
+    console.log(position);
+    getSunInfo(position.coords.latitude, position.coords.longitude);
 }
 
-function getSunInfo(lat,lng)
-{
-  var data = new Date();
-  var di = SunCalc.getDayInfo(data, lat, lng);
-  var sunrisePos = SunCalc.getSunPosition(di.sunrise.start, lat, lng);
-  var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
-  var sR = moment(di.sunrise.start);
-  var sS = moment(di.sunset.end);
-  var daylightHours = sS.diff (sR, 'hours');
-  console.log("getDayInfo", di);
-  console.log("daylightHours", daylightHours);
+function getSunInfo(lat, lng) {
+    var data = new Date();
+    var di = SunCalc.getDayInfo(data, lat, lng);
+    var sunrisePos = SunCalc.getSunPosition(di.sunrise.start, lat, lng);
+    var sunsetPos = SunCalc.getSunPosition(di.sunset.end, lat, lng);
+    var sR = moment(di.sunrise.start);
+    var sS = moment(di.sunset.end);
+    var daylightHours = sS.diff(sR, 'hours');
+    console.log("getDayInfo", di);
+    console.log("daylightHours", daylightHours);
 }
 
 // props
 var d = moment();
 var h = updateTime();
 var inx = -1;
-var defaultLocation = {coords:{latitude:40.7144,longitude:-74.006}};
+var defaultLocation = { coords: { latitude: 40.7144, longitude: -74.006 } };
 
-setCSSGradientByIndex(h);
+setCSSGradientByIndex(testtime);
 getLocation();
 
 // update every minute
-var interval = setInterval(function(){updateBasedOnNow();},60 * 1000);
-var interval2 = setInterval(function(){getLocation();},60 * 60 * 1000);
+var interval = setInterval(function () { updateBasedOnNow(); }, 60 * 1000);
+var interval2 = setInterval(function () { getLocation(); }, 60 * 60 * 1000);
