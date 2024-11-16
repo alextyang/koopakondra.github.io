@@ -5899,7 +5899,6 @@ var grads = [
     [{ color: "071B26", position: 0 }, { color: "071B26", position: 30 }, { color: "8A3B12", position: 80 }, { color: "240E03", position: 100 }],
 ];
 
-const testtime = 12;
 const banner = [
     { color: "030405" },
     { color: "090401" },
@@ -6018,7 +6017,7 @@ var h = updateTime();
 var inx = -1;
 var defaultLocation = { coords: { latitude: 40.7144, longitude: -74.006 } };
 
-setCSSGradientByIndex(testtime);
+setCSSGradientByIndex(h);
 getLocation();
 
 // update every minute

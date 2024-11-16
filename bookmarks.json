@@ -26,6 +26,11 @@
             "img": "./assets/home/img/work.png",
             "bookmark": [
                 {
+                    "name": "ADP Schedule",
+                    "url": "https://workforcenow.adp.com/theme/index.html#/Myself/MyselfTabTimecardsAttendanceSchCategoryMonthlySchedule",
+                    "img": "./assets/home/img/adp.png"
+                },
+                {
                     "name": "LinkedIn",
                     "url": "https://www.linkedin.com/feed/",
                     "img": "./assets/home/img/linkedin.png"
@@ -85,9 +90,45 @@
             ]
         },
         {
+            "name": "Read",
+            "img": "./assets/home/img/read.png",
+            "bookmark": [
+                {
+                    "name": "Wikipedia",
+                    "url": "https://en.wikipedia.org/wiki/Main_Page",
+                    "img": "./assets/home/img/wikipedia.png"
+                },
+                {
+                    "name": "Random Wiki Article",
+                    "url": "https://en.wikipedia.org/wiki/Special:Random",
+                    "img": "./assets/home/img/random.png"
+                },
+                {
+                    "name": "Libgen books",
+                    "url": "https://libgen.is",
+                    "img": "./assets/home/img/libgen.png"
+                },
+                {
+                    "name": "Philosophy plato stanford",
+                    "url": "https://plato.stanford.edu/index.html",
+                    "img": "./assets/home/img/plato.png"
+                },
+                {
+                    "name": "Audible",
+                    "url": "https://www.audible.com/library/titles",
+                    "img": "./assets/home/img/audible.png"
+                }
+            ]
+        },
+        {
             "name": "Projects",
             "img": "./assets/home/img/projects.png",
             "bookmark": [
+                {
+                    "name": "Localhost",
+                    "url": "http://localhost:3000",
+                    "img": "./assets/home/img/localhost.png"
+                },
                 {
                     "name": "Portfolio",
                     "url": "https://alexya.ng",
@@ -175,6 +216,11 @@
             "name": "Design",
             "img": "./assets/home/img/design.png",
             "bookmark": [
+                {
+                    "name": "Material Icons",
+                    "url": "https://fonts.google.com/icons",
+                    "img": "./assets/home/img/material.png"
+                },
                 {
                     "name": "Adobe Fonts",
                     "url": "https://fonts.adobe.com/fonts",
@@ -283,27 +329,6 @@
                     "name": "ConEd",
                     "url": "https://www.coned.com/en",
                     "img": "./assets/home/img/coned.png"
-                }
-            ]
-        },
-        {
-            "name": "Read",
-            "img": "./assets/home/img/read.png",
-            "bookmark": [
-                {
-                    "name": "Libgen books",
-                    "url": "https://libgen.is",
-                    "img": "./assets/home/img/libgen.png"
-                },
-                {
-                    "name": "Philosophy plato stanford",
-                    "url": "https://plato.stanford.edu/index.html",
-                    "img": "./assets/home/img/plato.png"
-                },
-                {
-                    "name": "Audible",
-                    "url": "https://www.audible.com/library/titles",
-                    "img": "./assets/home/img/audible.png"
                 }
             ]
         },
@@ -445,6 +470,11 @@
                     "name": "Google Flights",
                     "url": "https://www.google.com/flights",
                     "img": "./assets/home/img/googleflights.png"
+                },
+                {
+                    "name": "Tripadvisor",
+                    "url": "https://www.tripadvisor.com",
+                    "img": "./assets/home/img/tripadvisor.png"
                 },
                 {
                     "name": "Atlas Obscura",
