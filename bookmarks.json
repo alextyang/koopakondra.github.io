@@ -18,6 +18,16 @@
                     "name": "Alliant",
                     "url": "https://www.alliantcreditunion.com/onlinebanking/dashboard/S40",
                     "img": "./assets/home/img/alliant.png"
+                },
+                {
+                    "name": "Vanguard",
+                    "url": "https://dashboard.web.vanguard.com",
+                    "img": "./assets/home/img/vanguard.png"
+                },
+                {
+                    "name": "Capital One",
+                    "url": "https://myaccounts.capitalone.com/Card/vbxxrUEXWa7l3Q1Tmm51136bgqeZh%252FSp0tgqjaCYpOY=",
+                    "img": "./assets/home/img/capitalone.png"
                 }
             ]
         },
