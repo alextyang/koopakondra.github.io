@@ -49,6 +49,11 @@
                     "name": "Glassdoor",
                     "url": "https://www.glassdoor.com/Reviews/index.htm",
                     "img": "./assets/home/img/glassdoor.png"
+                },
+                {
+                    "name": "Harvestworks Dev",
+                    "url": "http://137.184.72.135/wp-admin/",
+                    "img": "./assets/home/img/harvestworks.png"
                 }
             ]
         },
@@ -86,6 +91,11 @@
                     "name": "ChatGPT",
                     "url": "https://chatgpt.com",
                     "img": "./assets/home/img/chatgpt.png"
+                },
+                {
+                    "name": "NotebookLM",
+                    "url": "https://notebooklm.google.com/",
+                    "img": "./assets/home/img/notebooklm.png"
                 },
                 {
                     "name": "Rhymezone",
